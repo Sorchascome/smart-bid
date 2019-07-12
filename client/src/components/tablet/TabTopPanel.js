@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+/* eslint-disable */
 import logo from '../../uploads/sbtablogo.png'
 
 export default class TabTopPanel extends Component {

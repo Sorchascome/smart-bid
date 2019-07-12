@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+/* eslint-disable */
 import arrow from '../uploads/Vector.svg'
 
 export default class HomeArrow extends Component {

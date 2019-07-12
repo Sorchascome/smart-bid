@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // Images
 import seven from '../uploads/clients/777.png'
 import eight from '../uploads/clients/888.png'

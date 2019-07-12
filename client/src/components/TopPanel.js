@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+/* eslint-disable */
 export default class TopPanel extends Component {
     constructor() {
         super();

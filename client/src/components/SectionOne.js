@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+/* eslint-disable */
 // Components
 import SBlogo from './SBlogo'
 import TopPanel from './TopPanel'

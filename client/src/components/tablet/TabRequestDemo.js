@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-import rob from '../../uploads/rob.png'
 import arrow from '../../uploads/btnarrow.png'
 
 export default class TabRequestDemo extends Component {

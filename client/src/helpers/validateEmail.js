@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 // Validates if email imput string is valid
 
 export function validateEmail(email) {

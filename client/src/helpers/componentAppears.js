@@ -1,5 +1,3 @@
-// Defines conditions when the component\s children should appear on screen
-
 exports.componentAppears = (Component, scroll_func) => {
     let element = document.querySelector(Component.state.class);
     let prevElemH = element.previousSibling.getBoundingClientRect().height;

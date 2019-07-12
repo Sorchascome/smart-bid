@@ -1,3 +1,5 @@
+// Makes component's children appear when scrtolled down/up the component's height
+
 export function elementHandler(Component, scroll_func) {
     let element = document.querySelector(Component.state.class);
     let prevElemH = element.previousSibling.getBoundingClientRect().height;

@@ -229,3 +229,50 @@
     top: 16vw;
     z-index: 0;
 }
+
+.button_continue {
+    display: none;
+    width: 355px;
+    height: 65px;
+    color: #FFFFFF;
+    margin-right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Gilroy Medium;
+    font-size: 18px;
+    align-items: center;
+    text-align: center;
+    background: #F88634;
+    border-radius: 5px;
+    border: none;
+    text-overflow: ellipsis;
+    // transition: all 0.3s;
+
+    &:hover, :active {
+        filter: brightness(115%);
+    }
+
+    & > span {
+        display: flex;
+        margin: 0 auto;
+        pointer-events: none;
+    }
+
+    @include breakpoint(1366px) {
+        display: flex;
+        font-size: 1.8vw;
+        width: 20vw;
+        height: 6.3vw;
+        margin: auto;
+        margin-bottom: 4%;
+      }
+
+    @include breakpoint(767px) {
+        width: 46vw;
+        height: 16vw;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 4vw;
+        text-indent: 0;
+    }
+}

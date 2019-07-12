@@ -22,6 +22,7 @@ export default class ThankYou extends Component {
                         <div className="thanks_main">Thank you!</div>
                         <div className="thanks_sub">An email will be sent to you shortly</div>
                     </div>
+                    <button className="button_continue" onClick={this.handleClose}><span>Continue</span></button>
                 </div>
             </div>
         )

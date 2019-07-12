@@ -1,5 +1,7 @@
 /* eslint-disable */
 
+// Handles the list of clients depending on the state of ClientPanel's component
+
 // Images
 import seven from '../uploads/clients/777.png'
 import eight from '../uploads/clients/888.png'

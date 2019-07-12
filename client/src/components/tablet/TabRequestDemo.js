@@ -8,7 +8,6 @@ export default class TabRequestDemo extends Component {
         return (
             <div className='TabRequestDemo'>
                 <div className="demo_title">
-                    <img className="menu_item_image" alt="" src={rob}></img>
                     Request a Demo
                 </div>
                 <div className="demo_input tab">

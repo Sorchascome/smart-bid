@@ -6,11 +6,11 @@ import MenuListItem from '../tablet/MenuListItem'
 import TabRequestDemo from '../tablet/TabRequestDemo'
 
 // Icons
-import ai from '../../uploads/tab_ai.png'
-import rob1 from '../../uploads/robot3.png'
+import ai from '../../uploads/cloud.png'
+import rob1 from '../../uploads/diamond.png'
 import drone from '../../uploads/ai.png'
 import rob2 from '../../uploads/robot2.png'
-import tabai from '../../uploads/tabai.png'
+import tabai from '../../uploads/glass.png'
 
 export default class TabSectionTwoMain extends Component {
     render() {

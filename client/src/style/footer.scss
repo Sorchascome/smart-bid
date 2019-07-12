@@ -196,19 +196,21 @@
     left: 28.6%;
     width: 38%;
     height: fit-content;
+    flex-direction: column;
     display: flex;
     padding: 1%;
     background: #ffffff;
     border-radius: 5px;
 
     @include breakpoint(1366px) {
-        width: 56%;
-        left: 21%;
+        width: 66%;
+        left: 16%
     }
 
     @include breakpoint(767px) {
         width: 86%;
         left: 6%;
+        padding: 6% 0;
     }
 }
 
@@ -218,6 +220,10 @@
     padding: 4%;
     margin: auto;
     text-align: center;
+
+    @include breakpoint(1366px) {
+        padding-bottom: 0;
+    }
 
     & > img {
         display: flex;
@@ -229,7 +235,7 @@
         }
 
         @include breakpoint(767px) {
-            width: 8vw;
+            width: 12vw;
         }
     }
 
@@ -240,7 +246,7 @@
         margin: 1.6vw auto;
 
         @include breakpoint(1366px) {
-            font-size: 5.2vw;
+            font-size: 4.2vw;
             line-height: 30px;
             margin: 2.6vw auto;
         }
@@ -279,8 +285,8 @@
     position: relative;
 
     @include breakpoint(767px) {
-        left: 94%;
-        top: 0.4%;
+        left: 91%;
+        top: -0.4%;
     }
 
     & > img {

@@ -14,7 +14,7 @@ export default class ThankYou extends Component {
         return (
             <div className="ThankYou hidden_thankyou hidden_alt slide">
                 <div className="thanks_panel hidden_alt slide">
-                    <a className='thanks_close' onClick={this.handleClose} href=''><img src={cross} alt='Close'></img></a>
+                    <a className='thanks_close' onClick={this.handleClose} href='#'><img src={cross} alt='Close'></img></a>
                     <div className="thanks_panel_inner" >
                         <img className="thanks_logo" src={smile} alt='Close'></img>
                         <div className="thanks_main">Thank you!</div>

@@ -41,44 +41,44 @@ export default class MobClientsPanel extends Component {
         return (
             <Carousel showArrows={false} showStatus={false} showThumbs={false}>
                 <div>
-                    <img src={mop}/>
-                    <img src={snat}/>
-                    <img src={eight}/>
-                    <img src={eightcas}/>
-                    <img src={beth}/>
-                    <img src={seven}/>
+                    <img alt="" src={mop}/>
+                    <img alt="" src={snat}/>
+                    <img alt="" src={eight}/>
+                    <img alt="" src={eightcas}/>
+                    <img alt="" src={beth}/>
+                    <img alt="" src={seven}/>
                 </div>
                 <div>
-                    <img src={blog}/>
-                    <img src={casumo}/>
-                    <img src={cgh}/>
-                    <img src={evpn}/>
-                    <img src={ikibu}/>
-                    <img src={lmax}/>
+                    <img alt="" src={blog}/>
+                    <img alt="" src={casumo}/>
+                    <img alt="" src={cgh}/>
+                    <img alt="" src={evpn}/>
+                    <img alt="" src={ikibu}/>
+                    <img alt="" src={lmax}/>
                 </div>
                 <div>
-                    <img src={lbrk}/>
-                    <img src={lveg}/>
-                    <img src={nvpn}/>
-                    <img src={pvpn}/>
-                    <img src={puvpn}/>
-                    <img src={shark}/>
+                    <img alt="" src={lbrk}/>
+                    <img alt="" src={lveg}/>
+                    <img alt="" src={nvpn}/>
+                    <img alt="" src={pvpn}/>
+                    <img alt="" src={puvpn}/>
+                    <img alt="" src={shark}/>
                 </div>
                 <div>
-                    <img src={whill}/>
-                    <img src={ava}/>
-                    <img src={betw}/>
-                    <img src={betwc}/>
-                    <img src={mbet}/>
-                    <img src={ojo}/>
+                    <img alt="" src={whill}/>
+                    <img alt="" src={ava}/>
+                    <img alt="" src={betw}/>
+                    <img alt="" src={betwc}/>
+                    <img alt="" src={mbet}/>
+                    <img alt="" src={ojo}/>
                 </div>
                 <div>
-                    <img src={iva}/>
-                    <img src={sky}/>
-                    <img src={bfr}/>
-                    <img src={hms}/>
-                    <img src={blogo}/>
-                    <img src={cor}/>
+                    <img alt="" src={iva}/>
+                    <img alt="" src={sky}/>
+                    <img alt="" src={bfr}/>
+                    <img alt="" src={hms}/>
+                    <img alt="" src={blogo}/>
+                    <img alt="" src={cor}/>
                 </div>
             </Carousel>
         );

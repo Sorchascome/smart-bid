@@ -26,7 +26,7 @@ export default class HomeArrow extends Component {
 
     render() {
         return (
-            <div className="HomeArrow hidden_alt slide" onClick={this.returnHome}><img src={arrow} className='home_arrow'></img></div>
+            <div className="HomeArrow hidden_alt slide" alt ="" onClick={this.returnHome}><img src={arrow} className='home_arrow'></img></div>
         )
     }
 }

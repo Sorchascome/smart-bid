@@ -8,12 +8,12 @@ export default class TabRequestDemo extends Component {
         return (
             <div className='TabRequestDemo'>
                 <div className="demo_title">
-                    <img className="menu_item_image" src={rob} alt='Rob'></img>
+                    <img className="menu_item_image" alt="" src={rob}></img>
                     Request a Demo
                 </div>
                 <div className="demo_input tab">
                     <input className="inputfield_email" type="email" placeholder="Enter Your Email"></input>
-                    <button className="button_get_started"><span>Get Started</span><img src={arrow}></img></button>
+                    <button className="button_get_started"><span>Get Started</span><img alt="" src={arrow}></img></button>
                 </div>
             </div>
         )

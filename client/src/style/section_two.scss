@@ -1,0 +1,371 @@
+.SectionTwo {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    left: 0px;
+    background: #ffffff;
+    flex-direction: column;
+    padding-bottom: 15%;
+}
+
+.OurProducts {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin: 8vw auto 6vw auto;
+    text-align: center;
+
+    @include breakpoint(1366px) {
+        width: 85%;
+        margin: 12vw auto 6vw auto;
+    }
+
+    @include breakpoint(767px) {
+        width: 85%;
+        text-align: left;
+    }
+}
+
+.our_products_top_title {
+    font-family: Gilroy Bold;
+    font-size: 21px;
+    line-height: 42px;
+
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+
+    color: #029ED6;
+
+    &.industries {
+        margin-left: 12vw;
+
+        @include breakpoint(1366px) {
+            margin-left: 4%;
+        }
+
+        @include breakpoint(767px) {
+            margin-left: 8%;
+        }
+    }
+
+    @include breakpoint(1366px) {
+        font-size: 1.8vw;
+        margin: 1.6vw;
+    }
+     
+    @include breakpoint(767px) {
+        font-size: 3.6vw;
+        margin: 0;
+    }
+}
+
+.our_products_main_title {
+    font-family: Gilroy Bold;
+    font-size: 55px;
+    line-height: 117%;
+    /* or 117% */
+    text-align: center;
+    margin-bottom: 1.6vw;
+    color: #333333;
+
+    & span {
+        position: relative;
+        // overflow: hidden;
+    }
+
+    @include breakpoint(1366px) {
+        font-size: 5.2vw;
+        line-height: 100%;
+        margin-bottom: 3.6vw;
+    }
+
+    @include breakpoint(767px) {
+        font-size: 8.8vw;
+        text-align: left;
+        line-height: 143%;
+    }
+}
+
+.our_products_subtitle {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 223%;
+    width: 90%;
+    margin: 0 auto;
+    /* or 31px */
+
+    @include breakpoint(1366px) {
+        font-size: 2vw;
+        width: 100%;
+      }
+
+    @include breakpoint(767px) {
+        font-size: 5.2vw;
+        text-align: left;
+        line-height: 183%;
+    }
+}
+
+
+.section_two_main {
+    width: 75%;
+    margin: 0 auto;
+
+    @include breakpoint(1366px) {
+        width: 96%;
+    }
+
+    @include breakpoint(767px) {
+        width: 100%;
+    }
+}
+
+.SectionTwoMain {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.SectionTwoMain_top{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vw;
+    justify-content: space-between;
+}
+
+.SectionTwoMain_bottom{
+    display: flex;
+    flex-direction: row;
+
+    & > .MenuItem3 > .menu_item_image {
+        width: 48px;
+        height: 48px;
+
+        @include breakpoint(1366px) {
+            width: 4.4vw;
+            height: 4.2vw;
+          }
+    }
+}
+
+.MenuItem0,.MenuItem1,.MenuItem2,.MenuItem3, .MenuItem4,.MenuItem5,.MenuItem6,.MenuItem7  {
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    margin: 0 4%;
+
+    @include breakpoint(1366px) {
+        width: 46%;
+        margin: 1% 3%;
+    }
+
+    @include breakpoint(767px) {
+        width: 85%;
+        margin: 6.6vw auto;
+    }
+}
+
+.menu_item_image {
+    width: 58px;
+    height: 52px;
+
+    @include breakpoint(1366px) {
+        width: 4.8vw;
+        height: 4.8vw;
+    }
+
+    @include breakpoint(767px) {
+        width: 12vw;
+        height: 12vw;
+    }
+}
+
+.menu_item_title {
+    font-family: Gilroy Bold;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 2vw 0;
+
+    @include breakpoint(1366px) {
+        font-size: 2.6vw;
+        margin: 3.2vw 0;
+    }
+
+    @include breakpoint(767px) {
+        font-size: 6.8vw;
+        margin: 5.2vw 0;
+    }
+}
+
+.menu_item_text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 200%;
+    text-align: justify;
+
+    @include breakpoint(1366px) {
+        font-size: 1.8vw;
+        width: 76%;
+    }
+
+    @include breakpoint(767px) {
+        font-size: 4.8vw;
+        line-height: 183%;
+        width: 100%;
+        text-align: left;
+    }
+
+}
+
+.RequestDemo {
+    margin-left: 25px;
+    width: 45%;
+    max-height: 185px;
+    background: #051C33;
+    border-radius: 5px;
+    padding: 3.5% 7%;
+    z-index: 3;
+    margin: auto;
+
+    @include breakpoint(1366px) {
+        width: 82%;
+        padding: 4.2% 7%;
+    }
+
+    @include breakpoint(767px) {
+        max-height: none;
+    }
+}
+
+.demo_title {
+    display: flex;
+    flex-direction: column;
+    font-family: Gilroy Bold;
+    font-size: 32px;
+    line-height: 30px;
+    color: #ffffff;
+    margin: 25px auto;
+
+    & > img {
+        margin-bottom: 3.2vw;
+    }
+
+    @include breakpoint(1366px) {
+        font-size: 2.6vw;
+    }
+
+    @include breakpoint(767px) {
+        font-size: 6.8vw;
+    }
+}
+
+.demo_input {
+    display: inline-flex;
+    margin: 25px auto;
+    width: 100%;
+
+    @include breakpoint(1366px) {
+
+        & > .inputfield_email {
+            width: 86%;
+        }
+
+        & > .button_get_started {
+            & > span {
+                font-size: 1.6vw;
+            }
+        }
+    }
+
+    @include breakpoint(767px) {
+        flex-direction: column;
+
+
+        & > .inputfield_email { 
+            width: 100%;
+            height: 16vw;
+            border-radius: 5px;
+            text-align: left;
+            text-indent: 4.6vw;
+            margin: 2.6vw 0;
+            font-size: 4vw;
+        }
+
+        & > .button_get_started > span {
+            font-size: 4vw;
+            margin: auto 4.6vw;
+        }
+    }
+
+    &.tab {
+        @include breakpoint(1366px) {
+            flex-direction: column;
+
+            @include breakpoint(767px) {
+                margin: 0 auto;
+            }
+
+            & > .inputfield_email {
+                width: auto;
+                border-radius: 5px;
+                height: 5vw;
+                margin-bottom: 1.6vw;
+                font-size: 1.8vw;
+
+                @include breakpoint(767px) {
+                    width: 100%;
+                    height: 16vw;
+                    border-radius: 5px;
+                    text-align: left;
+                    text-indent: 4.6vw;
+                    margin: 2.6vw 0;
+                    font-size: 4vw;
+                }
+            }
+
+            
+            & > .button_get_started {
+                justify-content: space-between;
+                width: auto;
+                border-radius: 5px;
+                height: 5vw;
+                margin-bottom: 1.6vw;
+                font-size: 1.8vw;
+
+                @include breakpoint(767px) {
+                    width: 100%;
+                    height: 16vw;
+                    border-radius: 5px;
+                    margin: 2.6vw 0;
+                    text-align: center;
+                    font-size: 4vw;
+                    text-indent: 0;
+                }
+
+                & > img {
+                    margin: auto 1.6vw;
+                    width: 4vw;
+
+                    @include breakpoint(767px) {
+                        width: 14vw;
+                        margin: auto 4.6vw;
+                    }
+                }
+
+                & > span {
+                    margin: auto 1.6vw;
+
+                    @include breakpoint(767px) {
+                        font-size: 4vw;
+                        margin: auto 4.6vw;
+                    }
+                }
+            }
+        }
+    }
+}

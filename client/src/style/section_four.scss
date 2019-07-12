@@ -1,0 +1,140 @@
+.SectionFour {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    background: #ffffff;
+    left: 0px;
+    flex-direction: row;
+    padding-bottom: 15%;
+
+    @include breakpoint(1366px) {
+        font-size: 1.8vw;
+        padding-bottom: 4%;
+    }
+
+    @include breakpoint(767px) {
+        padding-bottom: 76vw;
+    }
+}
+
+.SectionFive {
+    width: 83%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    height: fit-content;
+    background: #ffffff;
+    flex-direction: row;
+    padding-bottom: 15%;
+
+    @include breakpoint(1366px) {
+        width: 98%;
+        padding-bottom: 0%;
+    }
+}
+
+.sectionfive {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    @include breakpoint(1366px) {
+        height: 120vw;
+    }
+
+    @include breakpoint(767px) {
+        height: fit-content;
+    }
+}
+
+.Services {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12%;
+    text-align: left;
+    margin-top: 150px;
+    z-index: 3;
+
+
+    @include breakpoint(1366px) {
+        margin-top: 4%;
+        width: 52%;
+        margin-left: 4%;
+    }
+
+    @include breakpoint(767px) {
+        width: 85%;
+        text-align: left;
+        margin-left: 8%;
+    }
+}
+
+.Services_top_title {
+    font-family: Gilroy Bold;
+    font-size: 21px;
+    line-height: 42px;
+
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+
+    color: #029ED6;
+
+    @media (max-width: 1366px) {
+        font-size: 1.8vw;
+        margin: 1.6vw 0;
+    }
+
+    @include breakpoint(767px) {
+        font-size: 3.6vw;
+        margin: 0;
+    }
+}
+
+.Services_main_title {
+    font-family: Gilroy Bold;
+    font-size: 55px;
+    line-height: 117%;
+    /* or 117% */
+    margin-bottom: 32px;
+
+    & span {
+        position: relative;
+        // overflow: hidden;
+    }
+
+    @include breakpoint(1366px) {
+        font-size: 5.2vw;
+        line-height: 115%;
+        margin-bottom: 3.6vw;
+    }
+
+    @include breakpoint(767px) {
+        font-size: 8.8vw;
+        text-align: left;
+        line-height: 143%;
+    }
+}
+
+.Services_subtitle {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 223%;
+    width: 85%;
+    /* or 31px */
+
+    @include breakpoint(1366px) {
+        width: 96%;
+        font-size: 1.8vw;
+        line-height: 200%;
+    }
+
+    @include breakpoint(767px) {
+        font-size: 5.2vw;
+        text-align: left;
+        line-height: 183%;
+    }
+}

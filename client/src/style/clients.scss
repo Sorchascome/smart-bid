@@ -1,0 +1,157 @@
+.Clients {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    background: #ffffff
+
+}
+
+.OurClients {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 165px;
+    margin-left: 12%;
+    text-align: left;
+}
+
+.our_clients_top_title {
+    font-family: Gilroy Bold;
+    font-size: 21px;
+    line-height: 42px;
+
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+
+    color: #029ED6;
+
+    @include breakpoint(1366px) {
+        font-size: 1vw;
+    }
+}
+
+.our_clients_main_title {
+    font-family: Gilroy Bold;
+    font-size: 55px;
+    line-height: 117%;
+    /* or 117% */
+    margin-bottom: 32px;
+
+    & span {
+        position: relative;
+        // overflow: hidden;
+    }
+
+    @include breakpoint(1366px) {
+        font-size: 4vw;
+        line-height: 100%;
+      }
+}
+
+.our_clients_subtitle {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 223%;
+    width: 75%;
+    /* or 31px */
+
+    @include breakpoint(1320px) {
+        font-size: 1.6vw;
+        line-height: 150%;
+      }
+}
+
+.ClientsPanel {
+    display: block;
+    // margin: 5vw 0;
+    width: 75%;
+    margin: 0 auto;
+    height: 14vw;
+
+    @include breakpoint(1366px) {
+        width: 85%;
+    }
+}
+
+.ClientList {
+    display: inline-flex;
+    width: 5.4vw;
+    margin: 1.2vw 2.8vw;
+    filter: grayscale(100%);
+    cursor: pointer;
+
+    &:hover {
+        filter: none; 
+    }
+
+    
+    @include breakpoint(1366px) {
+        filter: none;
+        width: 7vw;
+    }
+}
+
+.client_panel {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: 5% auto;
+    margin-bottom: 8vw;
+    z-index: 10;
+}
+
+.client_arrow {
+    cursor: pointer;
+    position: relative;
+    width: 3.3vw;
+    height: 3.3vw;
+    background: #FFFFFF;
+    border: 0.2vw solid #F88634;
+    box-sizing: border-box;
+    border-radius: 210px;
+    opacity: 0.2;
+    z-index: 10;
+    margin: auto 0;
+
+    @include breakpoint(1366px) {
+        width: 4.95vw;
+        height: 4.95vw;
+    }
+
+    &:hover, :active {
+        opacity: 0.75;
+    }
+
+    &:first-child {
+        float: right;
+
+        .home_arrow {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &:last-child {
+        float: left;
+
+        .home_arrow {
+            transform: rotate(90deg);
+        }
+    }
+    
+    .home_arrow {
+        width: 1vw;
+        height: 1vw;
+        margin: 0.9vw;
+
+        @include breakpoint(1366px) {
+            width: 1.2vw;
+            height: 1.2vw;
+            margin: 1.68vw;
+        }
+    }
+}
+

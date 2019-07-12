@@ -1,0 +1,97 @@
+.AboutUs {
+    width: 100%;
+    position: relative;
+    display: flex;
+    height: 660px;
+    background: rgb(240, 240, 240);
+    z-index: 2;
+}
+
+.FewWords {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+
+    @include breakpoint(1366px) {
+        width: 96%;
+    }
+
+    @include breakpoint(767px) {
+        text-align: left;
+        width: 84%;
+    }
+}
+
+.few_words_top_title {
+    font-family: Gilroy Bold;
+    font-size: 21px;
+    line-height: 42px;
+
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+
+    color: #029ED6;
+
+    @include breakpoint(1366px) {
+        font-size: 1.8vw;
+        margin: 1.6vw;
+    }
+     
+    @include breakpoint(767px) {
+        text-align: left;
+        font-size: 3.6vw;
+        margin: 0;
+    }
+}
+
+.few_words_main_title {
+    font-family: Gilroy Bold;
+    font-size: 55px;
+    line-height: 117%;
+    /* or 117% */
+    text-align: center;
+    margin-bottom: 32px;
+
+    & span {
+        position: relative;
+        // overflow: hidden;
+    }
+
+    @include breakpoint(1366px) {
+        font-size: 5.2vw;
+        line-height: 115%;
+        margin-bottom: 3.6vw;
+    }
+
+    @include breakpoint(767px) {
+        font-size: 8.8vw;
+        text-align: left;
+        line-height: 143%;
+    }
+}
+
+.few_words_subtitle {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 223%;
+    width: 100%;
+    margin: 0 auto;
+    /* or 31px */
+
+    @include breakpoint(1366px) {
+        width: 88%;
+        font-size: 1.8vw;
+        line-height: 200%;
+    }
+
+    @include breakpoint(767px) {
+        width: 100%;
+        font-size: 5.2vw;
+        text-align: left;
+        line-height: 183%;
+    }
+}

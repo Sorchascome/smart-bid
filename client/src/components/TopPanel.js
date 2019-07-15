@@ -5,8 +5,26 @@ export default class TopPanel extends Component {
         super();
 
         this.handleClick = this.handleClick.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
     }
 
+    handleScroll() {
+        let panel = document.querySelector('.TopPanel');
+        let panelLinks = [...panel.children]
+        let panelY = Math.abs(panel.getBoundingClientRect().y - document.querySelector('.SectionOne.top').getBoundingClientRect().y);
+        let sectionOneEnding = document.querySelector('.SectionOne.top').getBoundingClientRect().height;
+        let footerStart = Math.abs(document.querySelector('.bottom_section.desk').getBoundingClientRect().y - document.querySelector('.SectionOne.top').getBoundingClientRect().y);
+
+        if((panelY > sectionOneEnding) && (panelY < footerStart)) {
+            panelLinks.forEach((link) => {
+                link.style.color = 'black'
+            })
+        } else {
+            panelLinks.forEach((link) => {
+                link.style.color = 'white'
+            })
+        }
+    }
 
     handleClick(e) {
         e.preventDefault();
@@ -30,6 +48,8 @@ export default class TopPanel extends Component {
             setTimeout(() => {Component.classList.remove('hidden')}, 500);
             let links = [...document.body.querySelectorAll('.TopPanel > a')];
             setTimeout(() => {links[2].classList.add('active')}, 1000); } 
+
+        document.addEventListener('scroll', this.handleScroll)
     }
 
     render() {

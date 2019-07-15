@@ -108,7 +108,7 @@ class Footer extends Component {
 
     render() {
         return (
-            <div className='SectionOne bottom_section'>
+            <div className='SectionOne bottom_section desk'>
                 <ThankYou />
                 <div className="section_one_bottom">
                     <BottomTitle show={this.state.show}/>

@@ -52,7 +52,7 @@ export default class SectionOne extends Component {
 
     render() {
         return (
-            <div className='SectionOne'>
+            <div className='SectionOne top'>
                 <div className="section_one_top">
                     <SBlogo show={this.state.show} />
                     <TopPanel show={true}/>

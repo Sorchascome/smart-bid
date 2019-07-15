@@ -25,17 +25,9 @@ export default class FewWords extends Component {
                 }, random);
             });
 
-            let topSubText = FewWordsSubTitle.innerText;
-            FewWordsSubTitle.innerHTML = '';
-            [...topSubText].forEach((char) => FewWordsSubTitle.innerHTML = FewWordsSubTitle.innerHTML + '<span class="hidden_alt slide">' + char + '</span>');
-
-            let subLetters = document.querySelectorAll('.FewWords > .few_words_subtitle > span');
-            subLetters.forEach((letter) => {
-                let random = 800 + Math.random() * 500;
-                setTimeout(() => {
-                    letter.classList.remove('hidden_alt');
-                }, random);
-            });
+            setTimeout(() => {
+                FewWordsSubTitle.classList.remove('hidden', 'hidden_alt');
+            }, 1000);
         }
     }
 
@@ -48,7 +40,7 @@ export default class FewWords extends Component {
                 <div className="few_words_main_title">
                     About Us
                 </div>
-                <div className="few_words_subtitle">
+                <div className="few_words_subtitle hidden_alt slide">
                 Established at 2016 and operates from the heart of Tel Aviv business center, Smart.bid is a unified predictive marketing hub designed specifically to service the needs of online advertisers who operate in a multi-channel and data driven marketing ecosystem.
                 </div>
             </div>

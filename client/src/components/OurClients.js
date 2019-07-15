@@ -25,17 +25,9 @@ export default class OurClients extends Component {
                 }, random);
             });
 
-            let topSubText = OurClientsSubTitle.innerText;
-            OurClientsSubTitle.innerHTML = '';
-            [...topSubText].forEach((char) => OurClientsSubTitle.innerHTML = OurClientsSubTitle.innerHTML + '<span class="hidden_alt slide">' + char + '</span>');
-
-            let subLetters = document.querySelectorAll('.OurClients > .our_clients_subtitle > span');
-            subLetters.forEach((letter) => {
-                let random = 800 + Math.random() * 500;
-                setTimeout(() => {
-                    letter.classList.remove('hidden_alt');
-                }, random);
-            });
+            setTimeout(() => {
+                OurClientsSubTitle.classList.remove('hidden', 'hidden_alt');
+            }, 500);
         }
     }
 
@@ -48,7 +40,7 @@ export default class OurClients extends Component {
                 <div className="our_clients_main_title">
                     Some of Smart.bid’s clients
                 </div>
-                <div className="our_clients_subtitle">
+                <div className="our_clients_subtitle hidden_alt slide">
                     From performance focused customer acquisition campaigns to brand led content promotions, our ability to plan, launch and deliver at scale and across multiple markets is unrivalled.
                 </div>
             </div>

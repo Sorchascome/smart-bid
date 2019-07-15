@@ -25,17 +25,9 @@ export default class OurProducts extends Component {
                 }, random);
             });
 
-            let topSubText = OurProductsSubTitle.innerText;
-            OurProductsSubTitle.innerHTML = '';
-            [...topSubText].forEach((char) => OurProductsSubTitle.innerHTML = OurProductsSubTitle.innerHTML + '<span class="hidden_alt slide">' + char + '</span>');
-
-            let subLetters = document.querySelectorAll('.OurProducts > .our_products_subtitle > span');
-            subLetters.forEach((letter) => {
-                let random = 800 + Math.random() * 500;
-                setTimeout(() => {
-                    letter.classList.remove('hidden_alt');
-                }, random);
-            });
+            setTimeout(() => {
+                OurProductsSubTitle.classList.remove('hidden', 'hidden_alt');
+            }, 1000);
         }
     }
 
@@ -48,7 +40,7 @@ export default class OurProducts extends Component {
                 <div className="our_products_main_title">
                     360° Predictive Marketing Hub
                 </div>
-                <div className="our_products_subtitle">
+                <div className="our_products_subtitle hidden_alt slide">
                     Whether you’re a marketer, sales manager or retailer, Smart.bid’s unified hub will bring customer engagement to its fullest potential.
                 </div>
             </div>

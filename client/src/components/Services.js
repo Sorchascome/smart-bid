@@ -25,17 +25,9 @@ export default class Services extends Component {
                 }, random);
             });
 
-            let topSubText = ServicesSubTitle.innerText;
-            ServicesSubTitle.innerHTML = '';
-            [...topSubText].forEach((char) => ServicesSubTitle.innerHTML = ServicesSubTitle.innerHTML + '<span class="hidden_alt slide">' + char + '</span>');
-
-            let subLetters = document.querySelectorAll('.Services > .Services_subtitle > span');
-            subLetters.forEach((letter) => {
-                let random = 900 + Math.random() * 500;
-                setTimeout(() => {
-                    letter.classList.remove('hidden_alt');
-                }, random);
-            });
+            setTimeout(() => {
+                ServicesSubTitle.classList.remove('hidden', 'hidden_alt');
+            }, 1000);
         }
     }
 
@@ -48,7 +40,7 @@ export default class Services extends Component {
                 <div className="Services_main_title">
                     The Only MarTech Hub That Knows Your Business
                 </div>
-                <div className="Services_subtitle">
+                <div className="Services_subtitle hidden_alt slide">
                     Learn about how Smart.bid is being utilized in the following channels.
                 </div>
             </div>

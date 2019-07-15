@@ -3,15 +3,18 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import { sendEmail } from '../store/actions/main'
 
+
 // Components
 import BottomTitle from './BottomTitle'
 import GetStarted from './GetStarted'
 import ThankYou from './ThankYou'
 
-// Logo
+// Images
 import logo from '../uploads/footer_logo.png'
 import point from '../uploads/point.png'
 import envelope from '../uploads/envelope.png'
+import lock from '../uploads/lock.png'
+import privacy from '../uploads/privacy.png'
 
 // Helpers
 import { componentAppears } from '../helpers/componentAppears'
@@ -117,8 +120,10 @@ class Footer extends Component {
                 <div className="section_footer desk">
                     <div className="bottomLogo hidden_alt slide"><img src={logo} alt='logo'></img></div>
                     <div className="bottomInfo hidden_alt slide">
+                        <a className="info_bar" href="/privacy"><img src={lock} alt='lock'></img><span>Privacy policy</span></a>
                         <span className="info_bar"><img src={point} alt='point'></img><span>Yigal Alon 94, Tel-Aviv, Israel</span></span>
                         <span className="info_bar"><img src={envelope} alt='envelope'></img><span>contact@smart.bid</span></span>
+                        <img className="privacy_img" src={privacy} alt='stamp'></img>
                     </div>
                 </div>
                 <span className="bottompoly first hidden slide"></span>

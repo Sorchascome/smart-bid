@@ -33,17 +33,9 @@ export default class TopTitle extends Component {
                 }, random);
             });
 
-            let topSubText = topSub.innerText;
-            topSub.innerHTML = '';
-            [...topSubText].forEach((char) => topSub.innerHTML = topSub.innerHTML + '<span class="hidden slide">' + char + '</span>');
-
-            let subLetters = document.querySelectorAll('.TopTitle > .top_subtitle > span');
-            subLetters.forEach((letter) => {
-                let random = 800 + Math.random() * 500;
-                setTimeout(() => {
-                    letter.classList.remove('hidden');
-                }, random);
-            });
+            setTimeout(() => {
+                topSub.classList.remove('hidden', 'hidden_alt');
+            }, 1000);
         }
     }
 
@@ -53,7 +45,7 @@ export default class TopTitle extends Component {
                 <div className="top_title slide">
                     <span className="top_title_main">Unlock your business potential with AI driven</span> <span className="top_title_lb" style={{color: '#029ED6'}}>Predictions</span>
                 </div>
-                <div className="top_subtitle slide">
+                <div className="top_subtitle hidden slide">
                     Let us show you how valuable your data is.
                 </div>
             </div>

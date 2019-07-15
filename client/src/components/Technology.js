@@ -25,17 +25,10 @@ export default class Technology extends Component {
                 }, random);
             });
 
-            let topSubText = TechnologySubTitle.innerText;
-            TechnologySubTitle.innerHTML = '';
-            [...topSubText].forEach((char) => TechnologySubTitle.innerHTML = TechnologySubTitle.innerHTML + '<span class="hidden_alt slide">' + char + '</span>');
 
-            let subLetters = document.querySelectorAll('.Technology > .technology_subtitle > span');
-            subLetters.forEach((letter) => {
-                let random = 900 + Math.random() * 500;
-                setTimeout(() => {
-                    letter.classList.remove('hidden_alt');
-                }, random);
-            });
+            setTimeout(() => {
+                TechnologySubTitle.classList.remove('hidden', 'hidden_alt');
+            }, 1000);
         }
     }
 
@@ -48,7 +41,7 @@ export default class Technology extends Component {
                 <div className="technology_main_title">
                     The Smart.bid Way
                 </div>
-                <div className="technology_subtitle">
+                <div className="technology_subtitle hidden_alt slide">
                     With a unique combination of cutting edge unified marketing technology, Smart.bid are leading the marketing AI innovation.
                 </div>
             </div>

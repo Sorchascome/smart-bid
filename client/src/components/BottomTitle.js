@@ -25,17 +25,9 @@ export default class BottomTitle extends Component {
                 }, random);
             });
 
-            let topSubText = BottomTitleSubTitle.innerText;
-            BottomTitleSubTitle.innerHTML = '';
-            [...topSubText].forEach((char) => BottomTitleSubTitle.innerHTML = BottomTitleSubTitle.innerHTML + '<span class="hidden_alt slide">' + char + '</span>');
-
-            let subLetters = document.querySelectorAll('.BottomTitle > .bottom_title_subtitle > span');
-            subLetters.forEach((letter) => {
-                let random = 800 + Math.random() * 500;
-                setTimeout(() => {
-                    letter.classList.remove('hidden_alt');
-                }, random);
-            });
+            setTimeout(() => {
+                BottomTitleSubTitle.classList.remove('hidden', 'hidden_alt');
+            }, 1000);
         }
     }
 
@@ -48,7 +40,7 @@ export default class BottomTitle extends Component {
                 <div className="bottom_title_main_title">
                     Request a Demo for your business!
                 </div>
-                <div className="bottom_title_subtitle">
+                <div className="bottom_title_subtitle hidden slide">
                     We'll show you how Smart.bid can grow your business with our 360° Predictive Hub! 
                 </div>
             </div>

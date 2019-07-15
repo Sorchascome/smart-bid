@@ -1,41 +1,41 @@
 /* eslint-disable */
 import React, { Component } from 'react'
-import './style/main.scss'
+import '../style/main.scss'
 import * as  MobileDetect from 'mobile-detect'
 import { Provider } from 'react-redux'
 
 // Redux store
-import store from './store'
+import store from '../store'
 
 // Components
-import SectionOne from './components/SectionOne'
-import SectionTwo from './components/SectionTwo'
-import SectionThree from './components/SectionThree'
-import SectionFour from './components/SectionFour'
-import SectionFive from './components/SectionFive'
-import AboutUs from './components/AboutUs'
-import Clients from './components/Clients'
-import Footer from './components/Footer'
+import SectionOne from '../components/SectionOne'
+import SectionTwo from '../components/SectionTwo'
+import SectionThree from '../components/SectionThree'
+import SectionFour from '../components/SectionFour'
+import SectionFive from '../components/SectionFive'
+import AboutUs from '../components/AboutUs'
+import Clients from '../components/Clients'
+import Footer from '../components/Footer'
 
 // Tablet
-import TabSectionOne from './components/tablet/TabSectionOne';
-import TabSectionTwo from './components/tablet/TabSectionTwo';
-import TabSectionThree from './components/tablet/TabSectionThree';
-import TabSectionFour from './components/tablet/TabSectionFour';
-import TabSectionFive from './components/tablet/TabSectionFive';
-import TabAboutUs from './components/tablet/TabAboutUs';
-import TabClients from './components/tablet/TabClients';
-import TabFooter from './components/tablet/TabFooter';
+import TabSectionOne from '../components/tablet/TabSectionOne';
+import TabSectionTwo from '../components/tablet/TabSectionTwo';
+import TabSectionThree from '../components/tablet/TabSectionThree';
+import TabSectionFour from '../components/tablet/TabSectionFour';
+import TabSectionFive from '../components/tablet/TabSectionFive';
+import TabAboutUs from '../components/tablet/TabAboutUs';
+import TabClients from '../components/tablet/TabClients';
+import TabFooter from '../components/tablet/TabFooter';
 
 // Mobile
-import MobSectionOne from './components/mobile/MobSectionOne';
-import MobSectionTwo from './components/mobile/MobSectionTwo';
-import MobSectionThree from './components/mobile/MobSectionThree';
-import MobSectionFour from './components/mobile/MobSectionFour';
-import MobSectionFive from './components/mobile/MobSectionFive';
-import MobAboutUs from './components/mobile/MobAboutUs'
-import MobClients from './components/mobile/MobClients'
-import MobFooter from './components/mobile/MobFooter'
+import MobSectionOne from '../components/mobile/MobSectionOne';
+import MobSectionTwo from '../components/mobile/MobSectionTwo';
+import MobSectionThree from '../components/mobile/MobSectionThree';
+import MobSectionFour from '../components/mobile/MobSectionFour';
+import MobSectionFive from '../components/mobile/MobSectionFive';
+import MobAboutUs from '../components/mobile/MobAboutUs'
+import MobClients from '../components/mobile/MobClients'
+import MobFooter from '../components/mobile/MobFooter'
 
 
 

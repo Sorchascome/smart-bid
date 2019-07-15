@@ -118,18 +118,37 @@
 .bottomInfo {
     margin: auto 0;
     display: flex;
-    width: 46%;
+    width: 78%;
     flex-direction: row;
     justify-content: space-between;
+    display: flex;
 
     @include breakpoint(1366px) {
-        width: 56%;
+        flex-flow: column wrap;
+        width: 78%;
+
+        & > div {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            & > img {
+                display: block;
+                margin: auto 0;
+            }
+        }
     }
 
     @include breakpoint(767px) {
         flex-direction: column;
         width: 100%;
         padding-bottom: 8vw;
+
+        & > img {
+            width: 50%;
+            display: block;
+            margin: auto;
+        }
     }
 }
 
@@ -138,7 +157,12 @@
     font-style: normal;
     font-weight: normal;
     font-size: 1.2vw;
+    margin: auto 0;
     color: black;
+
+    @include breakpoint(1366px) {
+        margin: 2.6vw;
+    }
 
     @include breakpoint(767px) {
         margin: 2.6vw auto;

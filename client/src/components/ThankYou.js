@@ -8,8 +8,10 @@ import smile from'../uploads/smile.png'
 export default class ThankYou extends Component {
     handleClose(e) {
         e.preventDefault();
-        let thankyouPanel = e.target.parentElement.parentElement.parentElement;
-        thankyouPanel.classList.add('hidden_thankyou');
+        let thankyouPanel = [...document.querySelectorAll('.ThankYou')];
+        thankyouPanel.forEach((target) => {
+            target.classList.add('hidden_thankyou', 'hidden_alt');
+        })
     }
 
     render() {

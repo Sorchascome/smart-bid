@@ -2,6 +2,10 @@
 import React, { Component } from 'react'
 import './style/main.scss'
 import * as  MobileDetect from 'mobile-detect'
+import { Provider } from 'react-redux'
+
+// Redux store
+import store from './store'
 
 // Components
 import SectionOne from './components/SectionOne'
@@ -87,38 +91,40 @@ export default class Main extends Component {
 
   render() {
       return (
-        <div>
-          <div className='main_container'>
-            <SectionOne />
-            <SectionTwo />
-            <SectionThree />
-            <SectionFour />
-            <SectionFive />
-            <AboutUs />
-            <Clients />
-            <Footer />
+        <Provider store={store} >
+          <div>
+            <div className='main_container'>
+              <SectionOne />
+              <SectionTwo />
+              <SectionThree />
+              <SectionFour />
+              <SectionFive />
+              <AboutUs />
+              <Clients />
+              <Footer />
+            </div>
+            <div className="tablet_container">
+              <TabSectionOne />
+              <TabSectionTwo />
+              <TabSectionThree />
+              <TabSectionFour />
+              <TabSectionFive />
+              <TabAboutUs />
+              <TabClients />
+              <TabFooter />      
+            </div>
+            <div className='mobile_container'>
+              <MobSectionOne />
+              <MobSectionTwo />
+              <MobSectionThree />
+              <MobSectionFour />
+              <MobSectionFive />
+              <MobAboutUs />
+              <MobClients />
+              <MobFooter />
+            </div>
           </div>
-          <div className="tablet_container">
-            <TabSectionOne />
-            <TabSectionTwo />
-            <TabSectionThree />
-            <TabSectionFour />
-            <TabSectionFive />
-            <TabAboutUs />
-            <TabClients />
-            <TabFooter />      
-          </div>
-          <div className='mobile_container'>
-            <MobSectionOne />
-            <MobSectionTwo />
-            <MobSectionThree />
-            <MobSectionFour />
-            <MobSectionFive />
-            <MobAboutUs />
-            <MobClients />
-            <MobFooter />
-          </div>
-        </div>
+        </Provider>
       );
     }
   }

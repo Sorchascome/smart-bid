@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux';
+import { sendEmail } from '../store/actions/main'
 
 // Components
 import BottomTitle from './BottomTitle'
@@ -14,7 +17,7 @@ import envelope from '../uploads/envelope.png'
 import { componentAppears } from '../helpers/componentAppears'
 import { validateEmail } from '../helpers/validateEmail'
 
-export default class SectionOne extends Component {
+class Footer extends Component {
     constructor(props) {
         super(props);
 
@@ -27,9 +30,14 @@ export default class SectionOne extends Component {
         this.handleGetStarted = this.handleGetStarted.bind(this);
     }
 
+    static propTypes = {
+        sendEmail: PropTypes.func.isRequired,
+    }
+
     handleGetStarted(e) {
         let emailField = e.target.previousSibling;
         if(validateEmail(emailField.value)) {
+            
             emailField.value = '';
             emailField.classList.remove('email_inc');
             emailField.placeholder = 'Enter Your Email';
@@ -126,3 +134,13 @@ export default class SectionOne extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => ({
+    
+  })
+  
+const dispatchToProps = (dispatch) => ({
+    sendEmail: () => dispatch(sendEmail())
+})
+
+export default connect(mapStateToProps, dispatchToProps)(Footer);

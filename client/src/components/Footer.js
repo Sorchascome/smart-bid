@@ -37,7 +37,7 @@ class Footer extends Component {
     handleGetStarted(e) {
         let emailField = e.target.previousSibling;
         if(validateEmail(emailField.value)) {
-            
+            this.props.sendEmail(emailField.value);
             emailField.value = '';
             emailField.classList.remove('email_inc');
             emailField.placeholder = 'Enter Your Email';
@@ -137,10 +137,10 @@ class Footer extends Component {
 
 const mapStateToProps = (state) => ({
     
-  })
+})
   
 const dispatchToProps = (dispatch) => ({
-    sendEmail: () => dispatch(sendEmail())
+    sendEmail: (email) => dispatch(sendEmail(email))
 })
 
 export default connect(mapStateToProps, dispatchToProps)(Footer);

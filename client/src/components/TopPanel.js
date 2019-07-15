@@ -36,7 +36,7 @@ export default class TopPanel extends Component {
         return (
             <div className='TopPanel slide hidden'>
                 <a className='top_panel_link' href="#" value=".AboutUs.desk" onClick={this.handleClick}>About us</a>
-                <a className='top_panel_link' href="#" value=".Technology.desk" onClick={this.handleClick}>Technology</a>
+                <a className='top_panel_link' href="#" value=".SectionThree" onClick={this.handleClick}>Technology</a>
                 <a className='top_panel_link' href="#" value=".OurProducts.desk" onClick={this.handleClick}>Products</a>
                 <a className='top_panel_link' href="#" value=".SectionFour.desk" onClick={this.handleClick}>Services</a>
                 <a className='top_panel_link' href="#" value=".section_footer.desk" onClick={this.handleClick}>Contact us</a>

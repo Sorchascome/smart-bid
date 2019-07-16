@@ -16,7 +16,7 @@ export default class Privacy extends Component {
         return (
             <div className="Privacy">
                 <div className="privacy_header">
-                    <div className='SBlogo'>
+                    <div className="privacyLogo">
                     </div>
                 </div>
                 <PrivacyPage />
@@ -26,7 +26,7 @@ export default class Privacy extends Component {
                         <a className="info_bar" href="/privacy"><img src={lock} alt='lock'></img><span>Privacy policy</span></a>
                         <span className="info_bar"><img src={point} alt='point'></img><span>Yigal Alon 94, Tel-Aviv, Israel</span></span>
                         <span className="info_bar"><img src={envelope} alt='envelope'></img><span>contact@smart.bid</span></span>
-                        <img className="privacy_img" src={privacy} alt='stamp'></img>
+                        <img width='160vw' className="privacy_img" src={privacy} alt='stamp'></img>
                     </div>
                 </div>
             </div>

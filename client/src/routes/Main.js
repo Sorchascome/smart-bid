@@ -1,6 +1,5 @@
 /* eslint-disable */
 import React, { Component } from 'react'
-import '../style/main.scss'
 import * as  MobileDetect from 'mobile-detect'
 import { Provider } from 'react-redux'
 

@@ -1,5 +1,135 @@
+.PrivacyPage {
+    background-color: #ffffff;
+    padding: 5.4vw;
+    display: flex;
+    width: auto;
+    height: fit-content;
+    flex-direction: row;
+    z-index: -1;
+
+    @include breakpoint(1366px) {
+        flex-direction: column;
+    }
+}
+
+.privacyLogo {
+    position: relative;
+    display: flex;
+    width: 180px;
+    height: 75px;
+    left: 10vw;
+    margin: 2vw 0;
+    top: 0;
+    z-index: 3;
+
+    background: center / cover no-repeat url('../uploads/logo-white2.png');
+}
+
+.privacy_left {
+    background: #F6F6F6;
+    border-radius: 5px;
+    padding: 2.6vw 3.2vw;
+    width: 205vw;
+    height: fit-content;
+
+    @include breakpoint(1366px) {
+        display: none;
+    }
+}
+
+.privacy_right {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0 4vw;
+    line-height: 233%;
+    width: auto;
+
+    & > p {
+        margin: 1.8vw 0;
+    }
+
+    @include breakpoint(1366px) {
+        padding: 0;
+    }
+
+    @include breakpoint(767px) {
+        font-size: 14px;
+    }
+
+}
+
+.privacy_link {
+    display: flex;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 1.8vw 0;
+    cursor: pointer;
+
+    @include breakpoint(1366px) {
+        margin: 30px 0;
+    }
+}
+
 .privacy_header {
     display: flex;
     background: #051C33;
-    height: 10vw;
+    height: fit-content;
+}
+
+.policy_title {
+    font-family: Gilroy Bold;
+    font-size: 42px;
+    margin-bottom: 3.6vw;
+
+    @include breakpoint(767px) {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+}
+
+.privacy_menu {
+    overflow: hidden;
+    display: none;
+    background: #F6F6F6;
+    border-radius: 5px;
+    width: auto;
+    padding: 0 3.2vw;
+    margin-bottom: 60px;
+    outline: none;
+    transition: all 0.5 ease-in-out;
+
+
+    @include breakpoint(1366px) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        max-height: 78px;
+        min-height: 35px;
+        white-space: nowrap;
+    }
+
+    &.active {
+        max-height: 1000px;
+    }
+
+    // @include breakpoint(767px) {
+    //     margin-bottom: 80px;
+    // }
+}
+
+.col_arrow {
+    position: absolute;
+    left: 88vw;
+    margin: 36px 0;
+    width: 1.2vw;
+    min-width: 12px;
+
+    @include breakpoint(767px) {
+        left: 85vw;
+    }
+
 }

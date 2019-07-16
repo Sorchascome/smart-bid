@@ -12,12 +12,6 @@ import tabai from '../../uploads/glass.png'
 
 export default class TabSectionTwoMain extends Component {
     render() {
-        let list = ['Analytics',
-            'Real time tracking and Adserver',
-            'Predictive BI',
-            'Predictive PPC Facebook & Google management',
-            'Predictive Affiliate program'
-            ]
 
         return (
             <div className="SectionTwoMain">

@@ -8,7 +8,7 @@ export default class PrivacyPage extends Component {
         let sectionClass = e.target.getAttribute('value');
         let section = document.getElementById(sectionClass);
         let sectionY = Math.abs(section.getBoundingClientRect().y - document.querySelector('.privacy_header').getBoundingClientRect().y);
-        document.querySelector('.privacy_menu').classList.remove('active');
+        document.querySelector('.col_arrow').click();
 
         window.scroll({
             top: sectionY, 

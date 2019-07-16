@@ -124,7 +124,7 @@
     display: flex;
 
     @include breakpoint(1366px) {
-        flex-flow: column wrap;
+        flex-flow: wrap;
         width: 78%;
 
         & > div {

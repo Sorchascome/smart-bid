@@ -8,6 +8,7 @@ export default class PrivacyPage extends Component {
         let sectionClass = e.target.getAttribute('value');
         let section = document.getElementById(sectionClass);
         let sectionY = Math.abs(section.getBoundingClientRect().y - document.querySelector('.privacy_header').getBoundingClientRect().y);
+        document.querySelector('.privacy_menu').classList.remove('active');
 
         window.scroll({
             top: sectionY, 
@@ -17,7 +18,15 @@ export default class PrivacyPage extends Component {
     }
 
     handleCollapse(e) {
-        e.target.parentElement.classList.add('active');
+        if (e.target.classList.contains('off')) {
+            e.target.style.transform = "rotate(180deg)";
+            e.target.parentElement.classList.add('active');
+            e.target.classList.remove('off');
+        } else {
+            e.target.style.transform = "rotate(0deg)";
+            e.target.parentElement.classList.remove('active');
+            e.target.classList.add('off');
+        }
     }
 
     render() {
@@ -35,7 +44,7 @@ export default class PrivacyPage extends Component {
                     <div className="privacy_link" onClick={this.handleLead} value="9">9. Children’s Privacy</div>
                     <div className="privacy_link" onClick={this.handleLead} value="10">10. Data Controller/Processor</div>
                     <div className="privacy_link" onClick={this.handleLead} value="11">11. Additional Notices</div>
-                    <img className="col_arrow" src={arrow} onClick={this.handleCollapse}></img>
+                    <img className="col_arrow off" src={arrow} onClick={this.handleCollapse}></img>
                 </div>
                 <div className="privacy_left">
                     <div className="privacy_link" onClick={this.handleLead} value="1">1. Data Collection</div>

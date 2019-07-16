@@ -1,11 +1,17 @@
-.PrivacyPage {
+.Privacy {
     background-color: #ffffff;
+}
+
+.PrivacyPage {
     padding: 5.4vw;
     display: flex;
     width: auto;
     height: fit-content;
     flex-direction: row;
     z-index: -1;
+
+    background: 0 2% / contain url('../uploads/privacy_bckgr.png');
+
 
     @include breakpoint(1366px) {
         flex-direction: column;
@@ -142,4 +148,12 @@
         left: 85vw;
     }
 
+}
+
+.privacy_img {
+
+    @include breakpoint(1366px) {
+        margin-right: 7.6vw;
+    }
+    
 }

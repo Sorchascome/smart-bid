@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import arrow from '../uploads/collapse_arrow.svg'
 
+
 export default class PrivacyPage extends Component {
 
     handleLead(e) {
@@ -44,7 +45,7 @@ export default class PrivacyPage extends Component {
                     <div className="privacy_link" onClick={this.handleLead} value="9">9. Children’s Privacy</div>
                     <div className="privacy_link" onClick={this.handleLead} value="10">10. Data Controller/Processor</div>
                     <div className="privacy_link" onClick={this.handleLead} value="11">11. Additional Notices</div>
-                    <img className="col_arrow off" src={arrow} onClick={this.handleCollapse}></img>
+                    <img className="col_arrow off" alt='arrow' src={arrow} onClick={this.handleCollapse}></img>
                 </div>
                 <div className="privacy_left">
                     <div className="privacy_link" onClick={this.handleLead} value="1">1. Data Collection</div>

@@ -81,19 +81,24 @@
     z-index: 5;
 }
 
+.listitem {
+    display: flex;
+    flex-direction: row;
+    margin: 8px 0;
+    &:before {
+        content: '●';
+        color: #029ED6;
+        margin: 0.5vw;
+    }
+
+}
+
 .TechList {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 19px;
     line-height: 200%;
-    margin: 8px 0;
-
-    &:before {
-        content: '●';
-        color: #029ED6;
-        margin: 0 1vw;
-    }
 
     &:last-child {
         margin: 0;

@@ -16,12 +16,11 @@ export default class Privacy extends Component {
         return (
             <div className="Privacy">
                 <div className="privacy_header">
-                    <div className="privacyLogo">
-                    </div>
+                    <a href="/"><div className="privacyLogo"></div></a>       
                 </div>
                 <PrivacyPage />
                 <div className="section_footer desk">
-                    <div className="bottomLogo"><img src={logo} alt='logo'></img></div>
+                    <a href="/"><div className="bottomLogo"><img src={logo} alt='logo'></img></div></a>
                     <div className="bottomInfo">
                         <a className="info_bar" href="/privacy"><img src={lock} alt='lock'></img><span>Privacy policy</span></a>
                         <span className="info_bar"><img src={point} alt='point'></img><span>Yigal Alon 94, Tel-Aviv, Israel</span></span>

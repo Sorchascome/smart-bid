@@ -26,7 +26,7 @@ export default class SectionOne extends Component {
 
         if(window.scrollY < elemEnd  || this.state.show === true) {
             this.setState({show: true});
-            let polys = [...document.body.querySelectorAll('.SectionOne > .poly, .polysmall')];
+            let polys = [...document.body.querySelectorAll('.SectionOne > .poly, .polysmall, .hexgroup_top')];
             polys.forEach((poly) => {
                 let random = 500 + Math.random() * 1000;
                 setTimeout(() => {poly.classList.remove('hidden')}, random);
@@ -54,7 +54,7 @@ export default class SectionOne extends Component {
         return (
             <div className='SectionOne top'>
                 <div className="section_one_top">
-                    <SBlogo show={this.state.show} />
+                <a href="/"><SBlogo show={this.state.show} /></a>
                     <TopPanel show={true}/>
                 </div>
                 <div className="section_one_bottom">
@@ -71,7 +71,7 @@ export default class SectionOne extends Component {
                 <span className="polysmall third hidden slide"></span>
                 <span className="polysmall fourth hidden slide"></span>
                 <span className="polytrans slide"></span>
-                <span className="hexgroup_top"></span>
+                <span className="hexgroup_top hidden slide"></span>
             </div>
         )
     }

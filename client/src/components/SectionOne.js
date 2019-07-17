@@ -21,14 +21,13 @@ export default class SectionOne extends Component {
 
     elementsAppear() {
         let element = document.querySelector('.SectionOne');
-        let elemStart = Math.abs(element.getBoundingClientRect().y - document.body.getBoundingClientRect().y);
         let elemEnd = Math.abs((element.getBoundingClientRect().y + element.getBoundingClientRect().height/2) - document.body.getBoundingClientRect().y);
 
         if(window.scrollY < elemEnd  || this.state.show === true) {
             this.setState({show: true});
             let polys = [...document.body.querySelectorAll('.SectionOne > .poly, .polysmall, .hexgroup_top')];
             polys.forEach((poly) => {
-                let random = 500 + Math.random() * 1000;
+                let random = Math.random() * 300;
                 setTimeout(() => {poly.classList.remove('hidden')}, random);
             });
             window.removeEventListener('scroll', this.elementsAppear);
@@ -39,7 +38,6 @@ export default class SectionOne extends Component {
     componentDidMount() {
         let element = document.querySelector('.SectionOne');
         let elemStart = Math.abs(element.getBoundingClientRect().y - document.body.getBoundingClientRect().y);
-        let elemEnd = Math.abs((element.getBoundingClientRect().y + element.getBoundingClientRect().height) - document.body.getBoundingClientRect().y);
 
         if (window.scrollY > elemStart) {
             window.addEventListener('scroll', this.elementsAppear);

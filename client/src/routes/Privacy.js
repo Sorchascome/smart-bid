@@ -25,7 +25,7 @@ export default class Privacy extends Component {
                         <a className="info_bar" href="/privacy"><img src={lock} alt='lock'></img><span>Privacy policy</span></a>
                         <span className="info_bar"><img src={point} alt='point'></img><span>Yigal Alon 94, Tel-Aviv, Israel</span></span>
                         <span className="info_bar"><img src={envelope} alt='envelope'></img><span>contact@smart.bid</span></span>
-                        <img width='160vw' className="privacy_img" src={privacy} alt='stamp'></img>
+                        <img width='200vw' className="privacy_img" src={privacy} alt='stamp'></img>
                     </div>
                 </div>
             </div>

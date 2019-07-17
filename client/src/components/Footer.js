@@ -120,7 +120,7 @@ class Footer extends Component {
                 <div className="section_footer desk">
                     <a href="/"><div className="bottomLogo hidden_alt slide"><img src={logo} alt='logo'></img></div></a>
                     <div className="bottomInfo hidden_alt slide">
-                        <a className="info_bar" href="/privacy"><img src={lock} alt='lock'></img><span>Privacy policy</span></a>
+                        <a className="info_bar" href="/privacy/index.html"><img src={lock} alt='lock'></img><span>Privacy policy</span></a>
                         <span className="info_bar"><img src={point} alt='point'></img><span>Yigal Alon 94, Tel-Aviv, Israel</span></span>
                         <span className="info_bar"><img src={envelope} alt='envelope'></img><span>contact@smart.bid</span></span>
                         <img className="privacy_img" src={privacy} alt='stamp'></img>

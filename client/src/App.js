@@ -11,7 +11,7 @@ export default class App extends Component {
         return (
             <Router>
                 <Route exact path='/' component={Main} />
-                <Route exact path='/privacy' component={Privacy} />
+                <Route exact path='/privacy/index.html' component={Privacy} />
             </Router>
         )
     }

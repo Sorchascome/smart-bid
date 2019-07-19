@@ -19,6 +19,19 @@ export default class PrivacyPage extends Component {
           });
     }
 
+    handleScroll() {
+        let panel = document.querySelector('.privacy_left');
+        let panelY = panel.getBoundingClientRect().y;
+        let panelH = panel.getBoundingClientRect().height;
+
+        if (panelY < 0) {
+            panel.style.transform = "translateY(" + (window.scrollY - panelH/4) + "px)";
+        } else if (panelY > panelH/4 && window.scrollY > 180) {
+            panel.style.transform = "translateY(" + (window.scrollY - panelH/4) + "px)";
+        }
+
+    }
+
     handleCollapse(e) {
         if (e.target.classList.contains('off')) {
             e.target.style.transform = "rotate(180deg)";
@@ -29,6 +42,10 @@ export default class PrivacyPage extends Component {
             e.target.parentElement.classList.remove('active');
             e.target.classList.add('off');
         }
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
     }
 
     render() {

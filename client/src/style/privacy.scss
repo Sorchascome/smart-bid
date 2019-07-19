@@ -38,11 +38,13 @@
 }
 
 .privacy_left {
+    position: relative;
     background: #F6F6F6;
     border-radius: 5px;
     padding: 2.6vw 3.2vw;
-    width: 205vw;
+    width: 175vw;
     height: fit-content;
+    transition: transform 0.65s ease;
 
     @include breakpoint(1366px) {
         display: none;

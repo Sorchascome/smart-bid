@@ -20,7 +20,7 @@ export default class SectionFive extends Component {
 
         this.elementsAppear = this.elementsAppear.bind(this);
     }
-    
+
     elementsAppear() {
         elementHandler(this, this.elementsAppear)
     }

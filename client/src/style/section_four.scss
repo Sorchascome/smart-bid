@@ -6,7 +6,6 @@
     background: #ffffff;
     left: 0px;
     flex-direction: row;
-    padding-bottom: 15%;
 
     @include breakpoint(1366px) {
         font-size: 1.8vw;
@@ -26,7 +25,6 @@
     height: fit-content;
     background: #ffffff;
     flex-direction: row;
-    padding-bottom: 15%;
 
     @include breakpoint(1366px) {
         width: 98%;
@@ -35,6 +33,7 @@
 }
 
 .sectionfive {
+    padding: 12% 0;
     display: flex;
     flex-direction: column;
     margin: 0 auto;

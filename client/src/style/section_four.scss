@@ -9,7 +9,7 @@
 
     @include breakpoint(1366px) {
         font-size: 1.8vw;
-        padding-bottom: 4%;
+        padding-bottom: 16%;
     }
 
     @include breakpoint(767px) {
@@ -27,7 +27,7 @@
     flex-direction: row;
 
     @include breakpoint(1366px) {
-        width: 98%;
+        width: auto;
         padding-bottom: 0%;
     }
 }
@@ -40,10 +40,12 @@
 
     @include breakpoint(1366px) {
         height: 120vw;
+        padding: 0;
     }
 
     @include breakpoint(767px) {
         height: fit-content;
+        padding: 8% 0;
     }
 }
 

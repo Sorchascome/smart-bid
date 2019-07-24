@@ -15,7 +15,7 @@ export default class GetStarted extends Component {
         return (
             <div className="GetStarted hidden slide">
                 <input className="inputfield_email" type="email" placeholder="Enter Your Email"></input>
-                <button className="button_get_started"><span>Get started</span></button>
+                <button className="button_get_started"><span>Get in touch</span></button>
             </div>
         )
     }

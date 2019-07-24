@@ -42,7 +42,7 @@ export default class Technology extends Component {
                     The Smart.bid Way
                 </div>
                 <div className="technology_subtitle hidden_alt slide">
-                    With a unique combination of cutting edge unified marketing technology, Smart.bid are leading the marketing AI innovation.
+                    With a unique cutting edge unified marketing technologies, Smart.bid is leading the marketing AI innovation.
                 </div>
             </div>
         )

@@ -26,7 +26,7 @@ export default class MobFooter extends Component {
                     <div className="bottomInfo">
                         <span className="info_bar"><img src={point} alt='point'></img><span>Yigal Alon 94, Tel-Aviv, Israel</span></span>
                         <span className="info_bar"><img src={envelope} alt='envelope'></img><span>contact@smart.bid</span></span>
-                        <a className="info_bar" href="/privacy/index.html"><img src={lock} alt='lock'></img><span>Privacy policy</span></a>
+                        <a className="info_bar" href="/privacy"><img src={lock} alt='lock'></img><span>Privacy policy</span></a>
                         <img className="privacy_img" src={privacy} alt='stamp'></img>
                     </div>
                 </div>

@@ -41,7 +41,7 @@ export default class FewWords extends Component {
                     About Us
                 </div>
                 <div className="few_words_subtitle hidden_alt slide">
-                Established at 2016 and operates from the heart of Tel Aviv business center, Smart.bid is a unified predictive marketing hub designed specifically to service the needs of online advertisers who operate in a multi-channel and data driven marketing ecosystem.
+                Established in 2016, Smart.bid operates in the heart of Tel Aviv business center, Smart.bid is a unified predictive marketing hub designed specifically to service the needs of online advertisers who operate in a multi-channel and data driven marketing ecosystem.
                 </div>
             </div>
         )

@@ -38,7 +38,7 @@ export default class BottomTitle extends Component {
                     let’s begin
                 </div>
                 <div className="bottom_title_main_title">
-                    Request a Demo for your business!
+                    Request a demo for your business!
                 </div>
                 <div className="bottom_title_subtitle hidden slide">
                     We'll show you how Smart.bid can grow your business with our 360° Predictive Hub! 

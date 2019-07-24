@@ -102,8 +102,8 @@
     margin: 0 4%;
 
     @include breakpoint(1366px) {
-        width: 46%;
-        margin: 2% 3%;
+        width: 36%;
+        margin: 1% 5%;
     }
 
     @include breakpoint(767px) {
@@ -116,14 +116,14 @@
     width: 36%;
     background-color: #051C33;
     border-radius: 5px;
-    padding: 2.5% 4%;
+    padding: 1% 5%;
     z-index: 3;
-    margin: auto;
 
     @include breakpoint(767px) {
         width: 82%;
         padding: 8%;
         margin-bottom: 10vw;
+        margin: auto;
     }
 }
 
@@ -133,11 +133,10 @@
     font-weight: normal;
     margin: 0.2vw 0;
     line-height: 200%;
-    text-align: justify;
 
     @include breakpoint(1366px) {
         font-size: 1.8vw;
-        width: 76%;
+        width: 100%;
     }
 
     @include breakpoint(767px) {

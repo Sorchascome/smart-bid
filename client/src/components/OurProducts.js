@@ -35,13 +35,13 @@ export default class OurProducts extends Component {
         return (
             <div className='OurProducts desk hidden_alt slide'>
                 <div className="our_products_top_title hidden_alt slide">
-                    Our products
+                    PRODUCT
                 </div>
                 <div className="our_products_main_title">
-                    360° Predictive Marketing Hub
+                    Data-driven Predictive Solutions
                 </div>
                 <div className="our_products_subtitle hidden_alt slide">
-                    Whether you’re a marketer, sales manager or retailer, Smart.bid’s unified hub will bring customer engagement to its fullest potential.
+                    Whether you’re a marketer, sales manager or data analyst, Smart.bid’s predictive technology gives you insights on customers’ lifetime value and behavior.
                 </div>
             </div>
         )

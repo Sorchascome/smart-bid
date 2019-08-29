@@ -89,6 +89,10 @@
         content: '●';
         color: #029ED6;
         margin: 0.5vw;
+
+        @include breakpoint(768px) {
+            margin: 2.5vw;
+        }
     }
 
 }

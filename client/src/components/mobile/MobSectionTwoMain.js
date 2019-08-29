@@ -15,10 +15,10 @@ export default class TabSectionTwoMain extends Component {
 
         return (
             <div className="SectionTwoMain">
-                <MenuItem  id={0} delay={0} hasIcon={true} icon={ai} title={'Predictive AI Marketing'} text={'Replace traditional data analysis with our AI Predictive Marketing platform to unlock your highest potential in ROI.'}/>
-                <MenuItem  id={1} delay={1} hasIcon={true} icon={rob1} title={'Predictive AI Sales'} text={'In most online business fewer than 10% of customers are responsible for over 80% of business. Smart.bid spots these leads in real time!'}/>
+                <MenuItem  id={0} delay={0} hasIcon={true} icon={ai} title={'Predictive BI Platform'} text={'Our unified BI hub helps you visualize today’s most important business insights and predict tomorrow’s customer behavior.'}/>
+                <MenuItem  id={1} delay={1} hasIcon={true} icon={rob1} title={'Predictive CI Platform'} text={'Predict your customer’s next move. Automate your marketing with personalized dynamic messaging to reach high-value customers in the right way, at the right time, and on the right channel.'}/>
                 <MenuItem  id={2} delay={0} hasIcon={true} icon={drone} title={'Predictive AI Customer Engagement'} text={'We enable high resolution customer profiling at scale, so that you can deliver the right message to the right lead at the right time.'}/>
-                <MenuItem  id={4} delay={3} hasIcon={true} icon={tabai} title={'AI Driven Risk Detection'} text={'Online businesses lose 25% annually due to inferior and fraudulent conversions each year.'}/>
+                <MenuItem  id={4} delay={3} hasIcon={true} icon={tabai} title={'Prediction As A Service'} text={'Online businesses lose 25% annually due to inferior and fraudulent conversions each year.'}/>
                 <TabRequestDemo  />
             </div>
         )

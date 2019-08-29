@@ -38,7 +38,7 @@ export default class Services extends Component {
                     Our Services
                 </div>
                 <div className="Services_main_title">
-                    The Only MarTech Hub That Knows Your Business
+                    The Only Unified MarTech Hub That Knows Your Business
                 </div>
                 <div className="Services_subtitle hidden_alt slide">
                     Learn about how Smart.bid is being utilized in the following channels.

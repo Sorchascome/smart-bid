@@ -43,7 +43,7 @@ export default class TopTitle extends Component {
         return (
             <div className='TopTitle hidden'>
                 <div className="top_title slide">
-                    <span className="top_title_main">Unlock your business potential with AI driven</span> <span className="top_title_lb" style={{color: '#029ED6'}}>Predictions</span>
+                <span className="top_title_lb" style={{color: '#029ED6'}}>Predict</span> <span className="top_title_main">your winning strategy</span> 
                 </div>
                 <div className="top_subtitle hidden slide">
                     Let us show you how valuable your data is.

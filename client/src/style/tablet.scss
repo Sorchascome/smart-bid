@@ -133,6 +133,8 @@
     font-weight: normal;
     margin: 0.2vw 0;
     line-height: 200%;
+    font-size: 19px;
+    white-space: nowrap;
 
     @include breakpoint(1366px) {
         font-size: 1.8vw;
@@ -148,9 +150,15 @@
     }
 
     & > img {
-        width: 1vw;
-        height: 1vw;
-        margin: 0 1vw;
+        width: 0.5vw;
+        height: 0.5vw;
+        margin: 0 0.3vw;
+
+        @include breakpoint(1366px) {
+            width: 1vw;
+            height: 1vw;
+            margin: 0 1vw;
+        }
 
         @include breakpoint(767px) {
             width: 2.6vw;

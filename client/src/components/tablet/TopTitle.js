@@ -5,7 +5,7 @@ export default class TopTitle extends Component {
         return (
             <div className='TopTitle'>
                 <div className="tab_title">
-                    <span className="tab_title_main">Unlock your business potential with AI driven</span> <span className="top_title_lb" style={{color: '#029ED6'}}>Predictions</span>
+                <span className="top_title_lb" style={{color: '#029ED6'}}>Predict</span> <span className="top_title_main">your winning strategy</span> 
                 </div>
                 <div className="tab_subtitle">
                     Let us show you how valuable your data is.

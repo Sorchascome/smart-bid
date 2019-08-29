@@ -16,12 +16,12 @@ export default class TabSectionFive extends Component {
             <div className="SectionFive">
                 <div className="SectionTwoMain">
                     <div className="SectionTwoMain_top">
-                        <MenuItem id={4} delay={0} icon={''} title={'Customers Financial Services'} text={'As fresh data constantly flows in, our models adapt yielding instant and continuous actionable insights.'}/>
-                        <MenuItem id={6} delay={2} icon={''} title={'Retail'} text={"Smart.bid's Predictive hub is constantly gathering data from both loyalty and less frequent customers activity, creating rich and ever-evolving customer profiles to yield a unique predictive customer status."}/>
+                        <MenuItem id={4} delay={0} icon={''} title={'FinTech'} text={'Achieve the best conversion from first engagement to deposit and optimal engagement with existing customers. Build loyalty through high resolution customer profiling at scale, and delivering ongoing customized dynamic content.'}/>
+                        <MenuItem id={6} delay={2} icon={''} title={'Retail'} text={"Research shows that improving customer retention by as little as 5% can increase profits up to 95%. Predicting behavior for customers with the most potential to become loyal supporters is essential to grow."}/>
                     </div>
                     <div className="SectionTwoMain_bottom">
-                        <MenuItem id={5} delay={1} icon={''} title={'Gaming'} text={'With Smart.bid, you can place AI-powered decision making at the heart of your brand choices, to fuel better conversion rates and improved customer retention.'}/>  
-                        <MenuItem id={7} delay={3} icon={''} title={'Services for Brands'} text={'With Smart.bid, you can place AI-powered decision making at the heart of your brand choices, to fuel better conversion rates and improved customer retention.'}/>                    </div>
+                        <MenuItem id={5} delay={1} icon={''} title={'Gaming'} text={'Our platform is able to build a unified profile for each player, predict their customer value, and optimize marketing messaging to turn high-value players into whales.'}/>  
+                    </div>
                     </div>
                 </div>
             <RequestDemo id={1} title={'Case studies'} button={'Receive further details'}/>

@@ -93,7 +93,7 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 223%;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     /* or 31px */
 
@@ -176,6 +176,17 @@
     }
 }
 
+.MenuItem5 {
+
+    @include breakpoint(1366px) {
+        margin: auto 55% 0 auto;
+    }
+
+    @include breakpoint(767px) {
+        margin: 0 auto;
+    }
+}
+
 .menu_item_image {
     width: 58px;
     height: 52px;
@@ -246,6 +257,7 @@
 
     @include breakpoint(767px) {
         max-height: none;
+        margin: 6vw auto;
     }
 }
 

@@ -16,7 +16,7 @@ export default class TabSectionFive extends Component {
             <div className="SectionFive">
                 <div className="SectionTwoMain">
                     <div className="SectionTwoMain_top">
-                        <MenuItem id={6} delay={0} icon={''} title={'Retail'} text={"Research shows that improving customer retention by as little as 5% can increase profits up to 95%. Predicting behavior for customers with the most potential to become loyal supporters is essential to grow."}/>
+                        <MenuItem id={6} delay={0} icon={''} title={'Retail'} text={"Research shows that improving customer retention by as little as 5% can increase profits up to 95%. Our platform predicts behavior for customers with the most potential to become loyal supporters, giving you an essential tool to grow."}/>
                         <MenuItem id={4} delay={1} icon={''} title={'FinTech'} text={'Achieve the best conversion from first engagement to deposit and optimal engagement with existing customers. Build loyalty through high resolution customer profiling at scale, and delivering ongoing customized dynamic content.'}/>
                     </div>
                     <div className="SectionTwoMain_bottom">

@@ -15,7 +15,7 @@
 
 
 .TabSectionTwo {
-    height: 164vw;
+    height: auto;
 
     @include breakpoint(767px) {
         flex-direction: column;
@@ -95,15 +95,19 @@
     margin: 0 auto;
 }
 
+.TabSectionThree {
+    height: auto;
+}
+
 .MenuListItem {
     display: flex;
     flex-direction: column;
-    width: 24%;
     margin: 0 4%;
 
     @include breakpoint(1366px) {
-        width: 36%;
-        margin: 1% 5%;
+        // width: 36%;
+        margin: 22% 5%;
+        
     }
 
     @include breakpoint(767px) {
@@ -113,11 +117,20 @@
 }
 
 .TabRequestDemo {
-    width: 36%;
+    width: 82%;
+    padding: 8%;
+    margin: auto;
     background-color: #051C33;
     border-radius: 5px;
-    padding: 1% 5%;
     z-index: 3;
+
+    @include breakpoint(767px) {
+        width: 36%;
+        background-color: #051C33;
+        border-radius: 5px;
+        padding: 8%;
+        z-index: 3;
+    }
 
     @include breakpoint(767px) {
         width: 82%;

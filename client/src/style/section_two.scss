@@ -6,7 +6,7 @@
     left: 0px;
     background: #ffffff;
     flex-direction: column;
-    padding-bottom: 15%;
+    padding-bottom: 5%;
 }
 
 .OurProducts {
@@ -38,7 +38,7 @@
     color: #029ED6;
 
     &.industries {
-        margin-left: 12vw;
+        margin-left: 8.5vw;
 
         @include breakpoint(1366px) {
             margin-left: 4%;
@@ -111,11 +111,11 @@
 
 
 .section_two_main {
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
 
     @include breakpoint(1366px) {
-        width: 96%;
+        width: 92%;
     }
 
     @include breakpoint(767px) {
@@ -127,16 +127,41 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+
+    &.alt {
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+    }
 }
 
 .SectionTwoMain_top{
     display: flex;
     flex-direction: row;
-    margin-bottom: 2vw;
+    margin-bottom: 6vw;
     justify-content: space-between;
 
     @include breakpoint(1366px) {
         justify-content: center;
+    }
+}
+
+.SectionTwoMain_column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vw;
+    width: 30%;
+    height: inherit;
+    justify-content: space-between;
+
+    & .MenuItem2 {
+        @include breakpoint(1366px) {
+            margin: 4%;
+        }
+    }
+
+    @include breakpoint(1366px) {
+        width: 45%;
     }
 }
 
@@ -162,12 +187,12 @@
 .MenuItem0,.MenuItem1,.MenuItem2,.MenuItem3, .MenuItem4,.MenuItem5,.MenuItem6,.MenuItem7  {
     display: flex;
     flex-direction: column;
-    width: 24%;
+    // width: 24%;
     margin: 0 4%;
 
     @include breakpoint(1366px) {
-        width: 36%;
-        margin: 1% 5%;
+        // width: 36%;
+        margin: 0% 4%;
     }
 
     @include breakpoint(767px) {
@@ -179,12 +204,17 @@
 .MenuItem5 {
 
     @include breakpoint(1366px) {
-        margin: auto 55% 0 auto;
+        width: 80%;
+        margin: 0 4%;
     }
 
     @include breakpoint(767px) {
         margin: 0 auto;
     }
+}
+
+.MenuItem7 {
+    width: 26%; 
 }
 
 .menu_item_image {
@@ -261,6 +291,45 @@
     }
 }
 
+.RequestDemoAlt {
+    width: 80%;
+    background: #051C33;
+    border-radius: 0.5vw;
+    padding: 2% 10%;
+    z-index: 3;
+    margin: auto;
+    margin-top: 2vw;
+
+    & .demo_input {
+        flex-direction: column;
+
+        & > .inputfield_email { 
+            width: 100%;
+            border-radius: 5px;
+            text-align: left;
+            margin-bottom: 1vw;
+        }
+
+        & > .button_get_started {
+            width: auto;
+            font-size: 19px;
+            border-radius: 5px;
+        }
+
+        & > .button_get_started > span {
+            margin: auto 1.4vw;
+        }
+    }
+
+    @include breakpoint(1366px) {
+        padding: 4.2% 7%;
+    }
+
+    @include breakpoint(767px) {
+        margin: 6vw auto;
+    }
+}
+
 .demo_title {
     display: flex;
     flex-direction: column;
@@ -303,7 +372,6 @@
 
     @include breakpoint(767px) {
         flex-direction: column;
-
 
         & > .inputfield_email { 
             width: 100%;

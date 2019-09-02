@@ -9,7 +9,7 @@
 
     @include breakpoint(1366px) {
         font-size: 1.8vw;
-        padding-bottom: 16%;
+        padding-bottom: 0;
     }
 
     @include breakpoint(767px) {
@@ -18,7 +18,7 @@
 }
 
 .SectionFive {
-    width: 83%;
+    width: 90%;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -39,12 +39,11 @@
     margin: 0 auto;
 
     @include breakpoint(1366px) {
-        height: 120vw;
-        padding: 0;
+        height: fit-content;
+        padding-bottom: 10vw;
     }
 
     @include breakpoint(767px) {
-        height: fit-content;
         padding: 8% 0;
     }
 }
@@ -53,7 +52,7 @@
     width: 30%;
     display: flex;
     flex-direction: column;
-    margin-left: 12%;
+    margin-left: 8%;
     text-align: left;
     margin-top: 150px;
     z-index: 3;

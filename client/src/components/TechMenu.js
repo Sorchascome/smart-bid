@@ -12,9 +12,8 @@ export default class TechMenu extends Component {
         const firstList = ['Analytics', 'Realtime Tracking & Adserver', 'Predictive BI', 'Predictive PPC Facebook & Google management', 'Predictive Affiliate program'];
         return (
             <div className="TechMenu">
-                <MenuItemTech show={this.props.show} delay={0} icon={mol1} title={'Unified Unified MarTech Hub'} text={'Beat the vendor bloat by using Smart.bid unified marktech hub designed by online marketers for online marketers, keeping all your media channel management in one place.'} list={firstList}/>
-                <MenuItemTech show={this.props.show} delay={1} icon={mol2} title={'Predictive Data Analytics'} text={'We extract information from your raw data, on-site or in-app user activity and visitor responses to create rich customer profiles which constantly update and reveal hidden potential  with our AI-driven targeting.'} list={[]}/>
-                <MenuItemTech show={this.props.show} delay={2} icon={cube} title={'Speed and Ease'} text={'Easily explore new angles and new ideas to create scalable personalized content across multiple channels. Fulfill your business KPIs and metrics with maximum performance.'}  list={[]}/>
+                <MenuItemTech show={this.props.show} delay={0} icon={mol1} title={'Leveraging every data point'} text={'Our unique infrastructure allows us to collect, analyze, and process vast amounts of data in real time. Tens of thousands of micro-events per user allow us to reach high prediction accuracy.'} list={[]}/>
+                <MenuItemTech show={this.props.show} delay={1} icon={mol2} title={'Modeling behavior for each customer'} text={'We connect behavioral patterns and traits between customers from different verticals. Our modeling framework gives us the ability to quickly infer a user’s profile and reach predictions much faster.'} list={[]}/>
             </div>
         )
     }

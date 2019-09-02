@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 165px;
-    margin-left: 12%;
+    margin-left: 8%;
     text-align: left;
 }
 
@@ -64,7 +64,9 @@
 }
 
 .ClientsPanel {
-    display: block;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     // margin: 5vw 0;
     width: 75%;
     margin: 0 auto;
@@ -76,21 +78,20 @@
 }
 
 .ClientList {
-    display: inline-flex;
-    width: 5.4vw;
+    display: flex;
+    max-width: 6vw;
+    height: 3vw;
     margin: 1.2vw 2.8vw;
     filter: grayscale(100%);
     cursor: pointer;
-    vertical-align: middle;
 
     &:hover {
         filter: none; 
     }
 
-    
     @include breakpoint(1366px) {
         filter: none;
-        width: 7vw;
+        height: 4vw;
     }
 }
 

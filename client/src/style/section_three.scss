@@ -2,17 +2,18 @@
     position: relative;
     display: flex;
     width: 100%;
-    height: 1800px;
+    height: fit-content;
     background: #ffffff;
     left: 0px;
+    margin-bottom: 65vw;
 }
 
 .Technology {
     position: relative;
-    width: 28%;
+    width: 30%;
     display: flex;
     flex-direction: column;
-    margin-left: 12%;
+    margin-left: 8%;
     text-align: left;
     margin-top: 290px;
     z-index: 3;
@@ -21,7 +22,7 @@
     @include breakpoint(1366px) {
         width: 36%;
         margin-left: 4%;
-        top: 48vw;
+        top: 0vw;
         margin-top: 20vw;
       }
 }
@@ -67,7 +68,7 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 223%;
-    width: 65%;
+    width: 80%;
     /* or 31px */
 
     @include breakpoint(1366px) {
@@ -79,12 +80,31 @@
 
 .TechMenu {
     z-index: 5;
+
+    @include breakpoint(1366px) {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 32vw;
+    }
+
+    @include breakpoint(768px) {
+        flex-direction: column;
+        margin-bottom: 28vw;
+    }
 }
 
 .listitem {
     display: flex;
     flex-direction: row;
-    margin: 8px 0;
+    margin: 12px 0;
+
+    &:first-of-type {
+        margin-top: 2vw;
+
+        @include breakpoint(768px) {
+            margin-top: 10vw;
+        }
+    }
     &:before {
         content: '●';
         color: #029ED6;
@@ -103,6 +123,7 @@
     font-weight: bold;
     font-size: 19px;
     line-height: 200%;
+    margin-top: 4vw;
 
     &:last-child {
         margin: 0;
@@ -126,7 +147,7 @@
     width: 18%;
     position: absolute;
     top: 300px;
-    right: 31%;
+    right: 28%;
     flex-direction: column;
     margin: 0 60px;
     background-color: #ffffff;
@@ -136,10 +157,9 @@
 
     @include breakpoint(1366px) {
         position: relative;
-        width: 36%;
-        top: 18vw;
-        left: 52%;
-        margin: 0;
+        width: 56%;
+        top: 12vw;
+        left: 0vw;
 
         & > .menu_item_text {
             width: 100%;
@@ -149,18 +169,18 @@
     @include breakpoint(767px) {
         width: 84%;
         left: 0;
-        top: 0;
-        margin: 8vw 0;
+        margin: 0;
         padding: 12vw 8vw;
     }
 }
+
 
 .MenuItemTech1 {
     display: flex;
     width: 18%;
     position: absolute;
-    top: 160px;
-    right: 5.5%;
+    top: 560px;
+    right: 0%;
     flex-direction: column;
     margin: 0 60px;
     background-color: #ffffff;
@@ -170,9 +190,10 @@
 
     @include breakpoint(1366px) {
         position: relative;
-        width: 36%;
-        top: -4vw;
-        right: 0vw;
+        width: 56%;
+        top: 12vw;
+        left: 1vw;
+        height: auto;
 
         & > .menu_item_text {
             width: 100%;
@@ -204,7 +225,7 @@
     @include breakpoint(1366px) {
         position: relative;
         width: 36%;
-        top: -20vw;
+        top: 12vw;
         left: 52%;
         margin: 0;
 

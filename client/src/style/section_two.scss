@@ -220,6 +220,15 @@
 .menu_item_image {
     width: 58px;
     height: 52px;
+    display: flex;
+
+
+    & img {
+        display: block;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
 
     @include breakpoint(1366px) {
         width: 4.8vw;

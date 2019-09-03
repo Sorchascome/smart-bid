@@ -21,11 +21,22 @@ export default class ClientsPanel extends Component {
     }
 
     arrowHandler() {
-        this.setState({position: !this.state.position, items: clientHandler(!this.state.position)});
+        let arrows = [...document.querySelectorAll('.client_arrow')];
+        arrows.map(arrow => arrow.removeEventListener('click', this.arrowHandler));
+
+        let items = [...document.querySelectorAll('.ClientList')];
+        items.forEach((item) => {
+            item.classList.add('hidden_alt');
+        })
+
+        setTimeout(() => {
+            this.setState({position: !this.state.position, items: clientHandler(!this.state.position)});
+        }, 500);
     }
     
     componentDidUpdate() {
         let items=[...document.querySelectorAll('.ClientList')];
+        let arrows = [...document.querySelectorAll('.client_arrow')];
         let showInterval = 250;
 
         setTimeout(() => {            
@@ -34,17 +45,21 @@ export default class ClientsPanel extends Component {
                 showInterval += 50;
             })
         }, 250);
+
+        setTimeout(() => {            
+            arrows.map(arrow => arrow.addEventListener('click', this.arrowHandler));
+        }, 1500);
     }
 
 
     render() {
         return (
             <div className='client_panel hidden_elems hidden_alt slide'>
-                <div className="client_arrow slide" onClick={this.arrowHandler}><img src={arrow} alt='arrow' className='home_arrow'></img></div>
+                <div className="client_arrow slide"><img src={arrow} alt='arrow' className='home_arrow'></img></div>
                 <div className="ClientsPanel">
                     <ClientList items={this.state.items}/>
                 </div>
-                <div className="client_arrow slide" onClick={this.arrowHandler}><img src={arrow} alt='arrow' className='home_arrow'></img></div>
+                <div className="client_arrow slide"><img src={arrow} alt='arrow' className='home_arrow'></img></div>
             </div>
         )
     }

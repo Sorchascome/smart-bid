@@ -79,11 +79,20 @@
 
 .ClientList {
     display: flex;
-    max-width: 6vw;
+    width: 5vw;
     height: 3vw;
     margin: 1.2vw 2.8vw;
     filter: grayscale(100%);
     cursor: pointer;
+    overflow: visible !important;
+
+    & img {
+        object-fit: contain;
+        display: flex;
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
 
     &:hover {
         filter: none; 
@@ -91,7 +100,8 @@
 
     @include breakpoint(1366px) {
         filter: none;
-        height: 4vw;
+        width: 6.2vw;
+        height: 4vw; 
     }
 }
 

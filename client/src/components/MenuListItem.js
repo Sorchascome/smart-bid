@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-import  check from '../uploads/check.png'
 import TechList from './TechList'
 
 export default class MenuListItem extends Component {
@@ -16,7 +15,7 @@ export default class MenuListItem extends Component {
     render() {
         return (
             <div className="MenuListItem">
-                {this.props.hasIcon ? <img className="menu_item_image hidden_alt slide" src={this.props.icon} alt={this.props.id}></img> : ''}
+                {this.props.hasIcon ? <div className="menu_item_image hidden_alt slide" key={this.props.id}><img src={this.props.icon} alt={this.props.id}></img></div> : ''}
                 <div className="menu_item_title hidden_alt slide">{this.props.title}</div>
                 <div className="menu_item_text hidden_alt slide">{this.props.text}</div>
                 <TechList items={this.props.list} />

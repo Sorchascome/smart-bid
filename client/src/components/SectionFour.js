@@ -21,8 +21,8 @@ export default class SectionFour extends Component {
     elementsAppear() {
         let element = document.querySelector('.SectionFour');
         let prevElemH = element.previousSibling.getBoundingClientRect().height;
-        let elemStart = Math.abs(element.getBoundingClientRect().y - prevElemH/2 - document.body.getBoundingClientRect().y);
-        let elemEnd = Math.abs((element.getBoundingClientRect().y + element.getBoundingClientRect().height/2) - document.body.getBoundingClientRect().y);
+        let elemStart = Math.abs(element.getBoundingClientRect().y - prevElemH - document.body.getBoundingClientRect().y);
+        let elemEnd = Math.abs((element.getBoundingClientRect().y + element.getBoundingClientRect().height) - document.body.getBoundingClientRect().y);
 
         if((window.scrollY < elemEnd && window.scrollY > elemStart)  || this.state.show === true) {
             this.setState({show: true});

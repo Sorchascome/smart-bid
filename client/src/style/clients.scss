@@ -87,9 +87,9 @@
     overflow: visible !important;
 
     & img {
-        object-fit: contain;
+        object-fit: fill;
         display: flex;
-        width: auto;
+        width: 100%;
         height: auto;
         margin: auto;
     }
@@ -100,8 +100,8 @@
 
     @include breakpoint(1366px) {
         filter: none;
-        width: 6.2vw;
-        height: 4vw; 
+        width: 6vw;
+        height: 4vw;
     }
 }
 

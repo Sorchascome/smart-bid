@@ -85,10 +85,10 @@
     filter: grayscale(100%);
     cursor: pointer;
     overflow: visible !important;
+    object-fit: contain;
+    object-position: center;
 
     & img {
-        object-fit: fill;
-        object-position: -50%;
         display: flex;
         width: 100%;
         height: auto;

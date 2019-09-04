@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 // Components
 import MenuItemTech from '../MenuItemTech'
 // Icons
-import mol1 from '../../uploads/mol1.png'
-import mol2 from '../../uploads/mol2.png'
+import mol1 from '../../uploads/data.svg'
+import mol2 from '../../uploads/mod.svg'
 
 export default class TechMenu extends Component {
     render() {

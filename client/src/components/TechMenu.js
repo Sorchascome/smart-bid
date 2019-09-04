@@ -2,14 +2,13 @@ import React, { Component } from 'react'
 
 // Components
 import MenuItemTech from './MenuItemTech'
+
 // Icons
-import mol1 from '../uploads/mol1.png'
-import mol2 from '../uploads/mol2.png'
-import cube from '../uploads/cube.png'
+import mol1 from '../uploads/data.svg'
+import mol2 from '../uploads/mod.svg'
 
 export default class TechMenu extends Component {
     render() {
-        const firstList = ['Analytics', 'Realtime Tracking & Adserver', 'Predictive BI', 'Predictive PPC Facebook & Google management', 'Predictive Affiliate program'];
         return (
             <div className="TechMenu">
                 <MenuItemTech show={this.props.show} delay={0} icon={mol1} title={'Leveraging every data point'} text={'Our unique infrastructure allows us to collect, analyze, and process vast amounts of data in real time. Tens of thousands of micro-events per user allow us to reach high prediction accuracy.'} list={[]}/>

@@ -379,66 +379,54 @@ body {
 
 .photo {
     position: absolute;
-    overflow: hidden;
-    filter: drop-shadow(0 25px 1rem #0000);
+    box-shadow: -3px 3px 29px 1px rgba(0,0,0,0.2);
+    width: 30vw;
+    height: 16vw;
+
+    @include breakpoint(767px) {
+        width: 60vw;
+        height: 32vw;
+    }
 
     &.first {
-        background: 0 / contain no-repeat url('../uploads/photo1.png');
-        background-size: 42vw;
-        left: 36%;
-        top: 0px;
-        width: 40vw;
-        height: 575px;
-        min-height: 450px;
-
+        background: 0 / 0% no-repeat url('../uploads/photo1.png');
+        background-size: 100%;
+        left: 48%;
+        top: 7vw;
     }
 
     &.second {
-        background: 0 / contain no-repeat url('../uploads/photo2.png');
-        background-size: 42vw;
-        left: 46%;
-        top: 95px;
-        width: 40vw;
-        height: 575px;
-        min-height: 450px;
+        background: 0 / 0% no-repeat url('../uploads/photo2.png');
+        background-size: 100%;
+        left: 56%;
+        top: 12vw;
 
         @include breakpoint(1366px) {
-            top: 8vw;
-            left: 50%;
+            top: 18vw;
+            left: 58%;
         }
 
         @include breakpoint(767px) {
-            top: 92vw;
-            left: -10vw;
-            width: 80vw;
-            height: 80vw;
-            background-size: 80vw;
-            min-height: 0;
+            top: 122vw;
+            left: 8vw;
             z-index: 2;
         }
     }
 
     &.third {
-        background: center / contain no-repeat url('../uploads/photo3.png');
+        background: 0 / 0% no-repeat url('../uploads/photo3.png');
         background-size: 100%;
-        left: 68%;
-        top: 185px;
-        width: 30%;
-        height: 525px;
-        min-height: 450px;
+        left: 64%;
+        top: 18vw;
 
         @include breakpoint(1366px) {
-            top: -4vw;
+            top: 10vw;;
             left: 65%;
         }
 
         @include breakpoint(767px) {
-            top: 82vw;
-            left: 36vw;
-            width: 56vw;
-            height: 56vw;
-            background-size: 56vw;
-            min-height: 0;
+            top: 102vw;
+            left: 30vw;
         }
     }
 }

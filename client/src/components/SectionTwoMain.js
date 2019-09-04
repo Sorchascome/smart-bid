@@ -6,10 +6,10 @@ import MenuListItem from './MenuListItem'
 import RequestDemo from './RequestDemoAlt'
 
 // Icons
-import ai from '../uploads/cloud.png'
-import diamond from '../uploads/diamond.png'
-import cloud from '../uploads/ai.png'
-import glass from '../uploads/glass.png'
+import ai from '../uploads/bi.svg'
+import diamond from '../uploads/ci.svg'
+import cloud from '../uploads/mth.svg'
+import glass from '../uploads/serv.svg'
 
 export default class SectionTwoMain extends Component {
     render() {

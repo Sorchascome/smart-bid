@@ -206,7 +206,7 @@
     border-radius: 0px 5px 5px 0px;
     border: none;
     text-overflow: ellipsis;
-    // transition: all 0.3s;
+    transition: filter 0.3s;
 
     &:hover, :active {
         filter: brightness(115%);

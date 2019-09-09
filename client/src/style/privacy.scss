@@ -85,7 +85,7 @@
 
     @include breakpoint(1366px) {
         margin: 30px 0;
-        width: 60%;
+        width: fit-content;
     }
 }
 

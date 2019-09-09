@@ -18,7 +18,7 @@ export default class SectionOne extends Component {
 
         this.elementsAppear = this.elementsAppear.bind(this);
     }
-
+    
     elementsAppear() {
         let element = document.querySelector('.SectionOne');
         let elemEnd = Math.abs((element.getBoundingClientRect().y + element.getBoundingClientRect().height/2) - document.body.getBoundingClientRect().y);

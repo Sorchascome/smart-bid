@@ -295,9 +295,9 @@ body {
     filter: brightness(0.22);
 
     &.first {
-        width: 88vw;
+        width: 82vw;
         min-width: 860px;
-        height: 86vw;
+        height: 82vw;
         left: 0px;
         top: 0px;
         z-index: 0;
@@ -318,9 +318,9 @@ body {
 
     &.first {
         background: 0 / contain no-repeat url('../uploads/graph1.png');
-        left: -10vw;
+        left: -5vw;
         top: 565px;
-        width: 48%;
+        width: 40%;
         height: 48vw;
         z-index: 3;
 
@@ -344,7 +344,7 @@ body {
         background: 0 / contain no-repeat url('../uploads/graph2.png');
         left: 4vw;
         top: 775px;
-        width: 48%;
+        width: 40%;
         height: 48vw;
         z-index: 4; 
 

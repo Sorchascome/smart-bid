@@ -45,7 +45,7 @@ class Footer extends Component {
             emailField.classList.remove('email_inc');
             emailField.placeholder = 'Enter Your Email';
             
-            let inputs = [...document.querySelectorAll('.GetStarted, .RequestDemo')];
+            let inputs = [...document.querySelectorAll('.GetStarted, .RequestDemo, .RequestDemoAlt')];
             inputs.forEach((input) => {
                 input.classList.add('inactive');
             })

@@ -17,6 +17,7 @@ export default class PrivacyPage extends Component {
     handleLead(e) {
         let sectionClass = e.target.getAttribute('value');
         let section = document.getElementById(sectionClass);
+        let panel = e.target.parentElement;
         let arrow = this.Arrow.current;
         let sectionY = Math.abs(section.getBoundingClientRect().y - document.querySelector('.privacy_header').getBoundingClientRect().y - 10);
         document.querySelector('.privacy_menu').classList.contains('active') ? arrow.click() : void(0);

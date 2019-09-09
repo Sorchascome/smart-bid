@@ -65,7 +65,7 @@
     }
 
     @include breakpoint(1366px) {
-        padding: 120px 4vw 0 4vw;
+        padding: 80px 4vw 0 4vw;
     }
 
     @include breakpoint(767px) {
@@ -84,7 +84,7 @@
     cursor: pointer;
 
     @include breakpoint(1366px) {
-        margin: 30px 0;
+        margin: 16px 0;
         width: fit-content;
     }
 }
@@ -123,8 +123,7 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        max-height: 78px;
-        min-height: 35px;
+        max-height: 48px;
         white-space: nowrap;
         transition: max-height 0.3s ease;
         overflow: hidden;
@@ -132,7 +131,7 @@
     }
 
     &.active {
-        max-height: 885px;
+        max-height: 568px;
     }
 
     // @include breakpoint(767px) {
@@ -143,7 +142,7 @@
 .col_arrow {
     position: absolute;
     left: 84vw;
-    margin: 36px 0;
+    margin: 21px 0;
     width: 1.2vw;
     min-width: 12px;
 

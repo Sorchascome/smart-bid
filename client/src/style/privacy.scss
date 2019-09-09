@@ -44,7 +44,7 @@
     padding: 2.6vw 3.2vw;
     width: 175vw;
     height: fit-content;
-    transition: transform 0.65s ease-out;
+    transition: transform 0.25s ease-out;
 
     @include breakpoint(1366px) {
         display: none;

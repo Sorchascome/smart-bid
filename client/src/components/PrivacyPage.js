@@ -9,12 +9,13 @@ export default class PrivacyPage extends Component {
     
         this.Arrow = React.createRef();
         this.handleLead = this.handleLead.bind(this);
+        this.handleCollapse = this.handleCollapse.bind(this);
     }
     
     
 
     handleLead(e) {
-        let sectionClass = e.target.getAttribute('value');
+        let sectionClass = arrow.getAttribute('value');
         let section = document.getElementById(sectionClass);
         let arrow = this.Arrow.current;
         let sectionY = Math.abs(section.getBoundingClientRect().y - document.querySelector('.privacy_header').getBoundingClientRect().y - 10);
@@ -41,15 +42,17 @@ export default class PrivacyPage extends Component {
 
     }
 
-    handleCollapse(e) {
-        if (e.target.classList.contains('off')) {
-            e.target.style.transform = "rotate(180deg)";
-            e.target.parentElement.classList.add('active');
-            e.target.classList.remove('off');
+    handleCollapse() {
+        let arrow = this.Arrow.current;
+
+        if (arrow.classList.contains('off')) {
+            arrow.style.transform = "rotate(180deg)";
+            arrow.parentElement.classList.add('active');
+            arrow.classList.remove('off');
         } else {
-            e.target.style.transform = "rotate(0deg)";
-            e.target.parentElement.classList.remove('active');
-            e.target.classList.add('off');
+            arrow.style.transform = "rotate(0deg)";
+            arrow.parentElement.classList.remove('active');
+            arrow.classList.add('off');
         }
     }
 
@@ -60,7 +63,7 @@ export default class PrivacyPage extends Component {
     render() {
         return (
             <div className="PrivacyPage">
-                <div className="privacy_menu" onClick={() => this.Arrow.current.click()}>
+                <div className="privacy_menu" onClick={this.handleCollapse}>
                     <div className="privacy_link" onClick={this.handleLead} value="1">1. Data Collection</div>
                     <div className="privacy_link" onClick={this.handleLead} value="2">2. Data Uses</div>
                     <div className="privacy_link" onClick={this.handleLead} value="3">3. Data Location and Retention</div>
@@ -72,7 +75,7 @@ export default class PrivacyPage extends Component {
                     <div className="privacy_link" onClick={this.handleLead} value="9">9. Children’s Privacy</div>
                     <div className="privacy_link" onClick={this.handleLead} value="10">10. Data Controller/Processor</div>
                     <div className="privacy_link" onClick={this.handleLead} value="11">11. Additional Notices</div>
-                    <img className="col_arrow off" ref={this.Arrow} alt='arrow' src={arrow} onClick={this.handleCollapse}></img>
+                    <img className="col_arrow off" ref={this.Arrow} alt='arrow' src={arrow}></img>
                 </div>
                 <div className="privacy_left">
                     <div className="privacy_link" onClick={this.handleLead} value="1">1. Data Collection</div>

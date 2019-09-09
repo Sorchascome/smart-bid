@@ -93,6 +93,10 @@
     display: flex;
     background: #051C33;
     height: fit-content;
+
+    & a {
+        width: 50%;
+    }
 }
 
 .policy_title {

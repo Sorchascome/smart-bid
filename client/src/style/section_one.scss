@@ -12,12 +12,12 @@
     position: relative;
     display: flex;
     width: 10vw;
-    height: 10vw;
+    height: 4vw;
     left: 10vw;
-    top: 0;
+    top: 2.4vw;
     z-index: 3;
 
-    background: center / contain no-repeat url('../uploads/logo-white2.png');
+    background: center / cover no-repeat url('../uploads/logo-white2.png');
 }
 
 .section_one_top {
@@ -32,7 +32,7 @@
     flex-direction: column;
     height: fit-content;
     width: 60%;
-    height: 50%;
+    height: 40%;
     margin: auto;
     z-index: 1;
 

@@ -99,16 +99,27 @@
 }
 
 .carousel .slider-wrapper {
-    margin: 12vw auto !important;
+    display: flex !important;
+}
+
+.carousel .slider-wrapper .slider {
+    display: flex !important;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .carousel .slide img {
-    width: 28% !important;
-    margin: 6vw !important;
+    width: 30vw !important;
+    max-height: 20vw !important;
+    margin: 8vw !important;
+    object-position: center;
+    object-fit: contain;
+    display: inline-flex;
 }
 
 .carousel .slide {
     background: none !important;
+
 }
 
 .carousel .control-dots {
@@ -123,4 +134,11 @@
 
 ul {
     padding-inline-start: 0;
+}
+
+.car_slide {
+    height: 100%;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

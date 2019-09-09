@@ -65,7 +65,7 @@
     }
 
     @include breakpoint(1366px) {
-        padding: 160px 4vw 0 4vw;
+        padding: 120px 4vw 0 4vw;
     }
 
     @include breakpoint(767px) {
@@ -113,7 +113,6 @@
     border-radius: 5px;
     width: auto;
     padding: 0 3.2vw;
-    margin-bottom: 60px;
     outline: none;
     white-space: nowrap;
 

@@ -40,7 +40,7 @@ export default class MobClientsPanel extends Component {
     render() {
         return (
             <Carousel showArrows={false} showStatus={false} showThumbs={false}>
-                <div>
+                <div className='car_slide'>
                     <img alt="" src={mop}/>
                     <img alt="" src={snat}/>
                     <img alt="" src={eight}/>
@@ -48,7 +48,7 @@ export default class MobClientsPanel extends Component {
                     <img alt="" src={beth}/>
                     <img alt="" src={seven}/>
                 </div>
-                <div>
+                <div className='car_slide'>
                     <img alt="" src={blog}/>
                     <img alt="" src={casumo}/>
                     <img alt="" src={cgh}/>
@@ -56,7 +56,7 @@ export default class MobClientsPanel extends Component {
                     <img alt="" src={ikibu}/>
                     <img alt="" src={lmax}/>
                 </div>
-                <div>
+                <div className='car_slide'>
                     <img alt="" src={lbrk}/>
                     <img alt="" src={lveg}/>
                     <img alt="" src={nvpn}/>
@@ -64,7 +64,7 @@ export default class MobClientsPanel extends Component {
                     <img alt="" src={puvpn}/>
                     <img alt="" src={shark}/>
                 </div>
-                <div>
+                <div className='car_slide'>
                     <img alt="" src={whill}/>
                     <img alt="" src={ava}/>
                     <img alt="" src={betw}/>
@@ -72,7 +72,7 @@ export default class MobClientsPanel extends Component {
                     <img alt="" src={mbet}/>
                     <img alt="" src={ojo}/>
                 </div>
-                <div>
+                <div className='car_slide'>
                     <img alt="" src={iva}/>
                     <img alt="" src={sky}/>
                     <img alt="" src={bfr}/>

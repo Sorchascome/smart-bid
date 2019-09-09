@@ -184,10 +184,13 @@
     }
 }
 
+.MenuItem4, .MenuItem5, .MenuItem6 {
+    width: 30%;
+}
+
 .MenuItem0,.MenuItem1,.MenuItem2,.MenuItem3, .MenuItem4,.MenuItem5,.MenuItem6,.MenuItem7  {
     display: flex;
     flex-direction: column;
-    width: 30%;
     margin: 0 4%;
 
     @include breakpoint(1366px) {

@@ -194,8 +194,9 @@
         }
     }
 
-    & > span {
+    & > span, a {
         margin: auto 0;
+        color: black;
 
         @include breakpoint(1366px) {
             font-size: 1.6vw;

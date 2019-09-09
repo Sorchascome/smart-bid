@@ -31,7 +31,9 @@
 }
 
 .section_three_mob {
-    height: 156vw;
+    height: 136vw;
+    background-color: #F6F6F6;
+    padding: 8vw 0;
 }
 
 .mob_panel_right{
@@ -73,7 +75,7 @@
 .MobTechnology {
     display: flex;
     flex-direction: column;
-    margin: 8vw auto 6vw auto;
+    margin: auto;
 
     @include breakpoint(767px) {
         width: 85%;

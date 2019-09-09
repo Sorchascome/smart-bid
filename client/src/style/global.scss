@@ -315,51 +315,57 @@ body {
 .graph {
     position: absolute;
     overflow: hidden;
+    width: 31vw;
+    height: 18vw;
+    border-radius: 2px;
+
+    @include breakpoint(1366px) {
+        width: 37.8vw;
+        height: 22vw;
+    }
+
+    @include breakpoint(767px) {
+        width: 62vw;
+        height: 36vw;
+        border-radius: 4px;
+    }
+
 
     &.first {
-        background: 0 / contain no-repeat url('../uploads/graph1.png');
-        left: -5vw;
-        top: 565px;
-        width: 40%;
-        height: 48vw;
+        background: 0 / cover no-repeat url('../uploads/graph1.jpg');
+        top: 725px;
+        left: 120px;
         z-index: 3;
+        filter: brightness(92%);
 
         @include breakpoint(1366px) {
             left: 50vw;
-            top: 312vw;
-            width: 48%;
-            height: 48vw;
+            top: 332vw;
+            filter: none;
         }
 
         @include breakpoint(767px) {
-            top: 68vw;
-            left: 16vw;
-            width: 80%;
-            height: 80vw;
+            top: 78vw;
+            left: 30vw;
             z-index: 4;
         }
     }
 
     &.second {
-        background: 0 / contain no-repeat url('../uploads/graph2.png');
-        left: 4vw;
-        top: 775px;
-        width: 40%;
-        height: 48vw;
-        z-index: 4; 
+        background: 0 / cover no-repeat url('../uploads/graph2.jpg');
+        left: 225px;
+        top: 975px;
+        z-index: 4;
 
         @include breakpoint(1366px) {
-            left: 42vw;
+            left: 60vw;
             top: 322vw;
-            width: 48%;
-            height: 48vw;
         }
 
         @include breakpoint(767px) {
-            top: 88vw;
-            left: 0vw;
-            width: 80%;
-            height: 80vw;
+            top: 96vw;
+            left: 8vw;
+            filter: brightness(98%);
             z-index: 3;
         }
     }

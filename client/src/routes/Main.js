@@ -49,7 +49,7 @@ export default class Main extends Component {
 
   checkMobile(device) {
     var dev = new MobileDetect(device);
-    if(window.innerWidth < 768) {
+    if(window.innerWidth < 767) {
       let hiddenElems = [...document.querySelectorAll('.hidden, .hidden_alt')];
       hiddenElems.forEach((elem) => {
         elem.classList.remove('hidden', 'hidden_alt', 'slide');
@@ -58,7 +58,7 @@ export default class Main extends Component {
       document.querySelector('.mobile_container').style.display = 'block';
       document.querySelector('.main_container').style.display = 'none';
       document.querySelector('.tablet_container').style.display = 'none';
-    } else if (dev.tablet() !== null || (window.innerWidth <= 1366 && window.innerWidth > 768)) {
+    } else if (dev.tablet() !== null || (window.innerWidth <= 1366 && window.innerWidth > 767)) {
       let hiddenElems = [...document.querySelectorAll('.hidden, .hidden_alt')];
       hiddenElems.forEach((elem) => {
         elem.classList.remove('hidden', 'hidden_alt', 'slide');

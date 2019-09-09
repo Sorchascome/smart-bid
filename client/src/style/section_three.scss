@@ -87,7 +87,7 @@
         margin-bottom: 32vw;
     }
 
-    @include breakpoint(768px) {
+    @include breakpoint(767px) {
         flex-direction: column;
         margin-bottom: 28vw;
     }
@@ -101,7 +101,7 @@
     &:first-of-type {
         margin-top: 2vw;
 
-        @include breakpoint(768px) {
+        @include breakpoint(767px) {
             margin-top: 10vw;
         }
     }
@@ -110,7 +110,7 @@
         color: #029ED6;
         margin: 0.5vw;
 
-        @include breakpoint(768px) {
+        @include breakpoint(767px) {
             margin: 2.5vw;
         }
     }

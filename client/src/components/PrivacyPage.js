@@ -13,11 +13,9 @@ export default class PrivacyPage extends Component {
     }
     
     
-
     handleLead(e) {
         let sectionClass = e.target.getAttribute('value');
         let section = document.getElementById(sectionClass);
-        let panel = e.target.parentElement;
         let arrow = this.Arrow.current;
         let sectionY = Math.abs(section.getBoundingClientRect().y - document.querySelector('.privacy_header').getBoundingClientRect().y - 10);
         document.querySelector('.privacy_menu').classList.contains('active') ? arrow.click() : void(0);
@@ -112,14 +110,14 @@ export default class PrivacyPage extends Component {
                     <p><b id="2"> 2. Data Uses</b><br/>
                     We use Personal Data as necessary for the performance of our Services; to comply with applicable law; and to support our legitimate interests in maintaining and improving our Services and offerings, understanding how our Services are used, optimizing our marketing and advertising services, customer service and support operations, and protecting and securing our End-Users, Customers, ourselves and our Services.</p>
                     <p>Specifically, we use Personal Data for the following purposes:</p>
-                    <p>1. To facilitate, operate, and provide our Services;</p>
-                    <p>2. To authenticate the identity of our End-Users, and to allow them access to our Services;</p>
-                    <p>To provide our Visitors, End-Users and Customers with assistance and support;</p>
-                    <p>3. To further develop, customize and improve the Services and your End-User experience, based on common or personal preferences, experiences and difficulties;</p>
-                    <p>4. To contact our Visitors, End-Users and Customers with general or personalized service-related messages (such as password-retrieval or billing) and promotional messages (such as newsletters, webinars, new features, etc.); and to facilitate, sponsor and offer certain events and promotions;</p>
-                    <p>5. To support and enhance our data security measures, including for the purposes of preventing and mitigating the risks of fraud, error or any illegal or prohibited activity;</p>
-                    <p>6. To create aggregated statistical data, inferred non-personal data or anonymized or pseudonymized data (rendered non-personal), which we or our business partners may use to provide and improve our respective services; and</p>
-                    <p>7. To comply with any applicable laws and regulations.</p>
+                    <p>1. To facilitate, operate, and provide our Services;<br/>
+                    2. To authenticate the identity of our End-Users, and to allow them access to our Services;<br/>
+                    To provide our Visitors, End-Users and Customers with assistance and support;<br/>
+                    3. To further develop, customize and improve the Services and your End-User experience, based on common or personal preferences, experiences and difficulties;<br/>
+                    4. To contact our Visitors, End-Users and Customers with general or personalized service-related messages (such as password-retrieval or billing) and promotional messages (such as newsletters, webinars, new features, etc.); and to facilitate, sponsor and offer certain events and promotions;<br/>
+                    5. To support and enhance our data security measures, including for the purposes of preventing and mitigating the risks of fraud, error or any illegal or prohibited activity;<br/>
+                    6. To create aggregated statistical data, inferred non-personal data or anonymized or pseudonymized data (rendered non-personal), which we or our business partners may use to provide and improve our respective services; and<br/>
+                    7. To comply with any applicable laws and regulations.</p>
                     <p><b id="3">3. Data Location & Retention</b><br/>
                     <b>Data Location:</b> Your Personal Data may be maintained, processed and stored by our authorized affiliates and Service Providers (defined below) in the United States of America, the EU and other jurisdictions, as necessary for the proper delivery of our Services, or as may be required by law.</p>
                     <p>Smart.Bid is headquartered in Israel, a jurisdiction which is considered by the European Commission to be offering an adequate level of protection for the Personal Data of EU Member State residents.</p>

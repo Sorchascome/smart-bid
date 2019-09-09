@@ -13,14 +13,6 @@ import privacy from '../uploads/privacy.png'
 
 export default class Privacy extends Component {
     render() {
-        let list = [
-            'Smart.bid Tracking',
-            'Smart.bid Analytics',
-            'Smart.bid’s ad server',
-            'Smart.bid RTB',
-            'Smart.bid Affiliate Program',
-        ]
-
         return (
             <div className="Privacy">
                 <div className="privacy_header">

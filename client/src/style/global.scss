@@ -341,7 +341,7 @@ body {
         @include breakpoint(1366px) {
             left: 50vw;
             top: 332vw;
-            filter: none;
+            // filter: none;
         }
 
         @include breakpoint(767px) {

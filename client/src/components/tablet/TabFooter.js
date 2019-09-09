@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 // Components
 import BottomTitle from '../BottomTitle'
-import GetStarted from './GetStarted'
 import ThankYou from '../ThankYou'
 
 // Images
@@ -20,7 +19,6 @@ export default class SectionOne extends Component {
                 <ThankYou />
                 <div className="section_one_bottom">
                     <BottomTitle/>
-                    <GetStarted />
                 </div>
                 <div className="section_footer">
                     <div className="bottomLogo hidden_alt slide"><img src={logo} alt='logo'></img></div>

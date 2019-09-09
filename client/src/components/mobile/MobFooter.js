@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 // Components
 import BottomTitle from './BottomTitle'
-import MobGetStarted from './MobGetStarted'
+
 import ThankYou from '../ThankYou'
 
 // Images
@@ -19,7 +19,6 @@ export default class MobFooter extends Component {
                 <ThankYou />
                 <div className="section_one_tab">
                     <BottomTitle />
-                    <MobGetStarted />
                 </div>
                 <div className="section_footer">
                     <div className="bottomLogo"><img src={logo} alt='logo'></img></div>

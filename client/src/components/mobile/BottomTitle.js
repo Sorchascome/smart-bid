@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import MobGetStarted from './MobGetStarted'
+
 export default class BottomTitle extends Component {
     render() {
         return (

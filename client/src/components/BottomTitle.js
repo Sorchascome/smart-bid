@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import GetStarted from './GetStarted'
 
 export default class BottomTitle extends Component {
     componentDidUpdate() {
@@ -43,6 +44,7 @@ export default class BottomTitle extends Component {
                 <div className="bottom_title_subtitle hidden slide">
                     We'll show you how Smart.bid can grow your business with our 360° Predictive Hub! 
                 </div>
+                <GetStarted/>
             </div>
         )
     }

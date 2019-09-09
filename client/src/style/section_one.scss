@@ -38,6 +38,7 @@
 
     @include breakpoint(1366px) {
         width: 76%;
+        height: auto;
     }
 }
 
@@ -143,7 +144,8 @@
     @include breakpoint(1366px) {
         width: 56vw;
         height: 6vw;
-        font-size: 1.8vw
+        font-size: 1.8vw;
+        margin: 15px auto;
     }
 
     @include breakpoint(767px) {
@@ -221,7 +223,7 @@
     @include breakpoint(1366px) {
         font-size: 1.8vw;
         width: 20vw;
-        height: 6.191vw;
+        height: 6.26vw;
       }
 
     @include breakpoint(767px) {

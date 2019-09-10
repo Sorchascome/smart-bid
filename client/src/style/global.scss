@@ -318,6 +318,7 @@ body {
     width: 31vw;
     height: 18vw;
     border-radius: 2px;
+    box-shadow: -3px 3px 29px 1px rgba(0,0,0,0.4);
 
     @include breakpoint(1366px) {
         width: 37.8vw;

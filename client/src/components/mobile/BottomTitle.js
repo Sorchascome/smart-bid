@@ -15,6 +15,7 @@ export default class BottomTitle extends Component {
                 <div className="tab_subtitle">
                     We'll show you how Smart.bid can grow your business with our 360° Predictive Hub! 
                 </div>
+                <MobGetStarted />
             </div>
         )
     }

@@ -84,7 +84,7 @@ class Footer extends Component {
                 let random = 500 + Math.random() * 1000;
                 setTimeout(() => {bottompoly.classList.remove('hidden')}, random);
             });
-            let bottomGetStarted = document.body.querySelector('.bottom_section > .section_one_bottom > .GetStarted');
+            let bottomGetStarted = document.body.querySelector('.bottom_section > .section_one_bottom > .BottomTitle > .GetStarted');
             setTimeout(() => {   
                 bottomGetStarted.classList.remove('hidden');
                 bottomGetStarted.style.animation = "textslide 0.25s 1";
@@ -115,7 +115,6 @@ class Footer extends Component {
                 <ThankYou />
                 <div className="section_one_bottom">
                     <BottomTitle show={this.state.show}/>
-                    <GetStarted />
                 </div>
                 <div className="section_footer desk">
                     <a className="blogo_wrapper" href="/"><div className="bottomLogo hidden_alt slide"><img src={logo} alt='logo'></img></div></a>

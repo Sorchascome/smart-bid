@@ -127,6 +127,7 @@
     opacity: 0.2;
     z-index: 10;
     margin: auto 0;
+    display: flex;
 
     @include breakpoint(1366px) {
         width: 3.95vw;
@@ -154,14 +155,14 @@
     }
     
     .home_arrow {
+        display: block;
+        object-fit: contain;
         width: 1vw;
-        height: 1vw;
-        margin: 0.945vw;
+        height: auto;
+        margin: auto;
 
         @include breakpoint(1366px) {
             width: 1.2vw;
-            height: 1.2vw;
-            margin: 1.2vw;
         }
     }
 }

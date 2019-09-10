@@ -19,6 +19,7 @@ export default class TabSectionTwoMain extends Component {
             'Smart.bid’s Ad Server',
             'Smart.bid RTB',
             'Smart.bid Affiliate Program',
+            'Smart.bid Landing Page Builder'
         ]
 
         return (

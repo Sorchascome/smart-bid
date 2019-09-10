@@ -446,14 +446,14 @@ body {
     // filter: grayscale(100%);
     width: 21vw;
     height: 660px;
-    left: 78.8%;
+    left: 78.4%;
     top: -100px;
     z-index: 0;
 
     @include breakpoint(1366px) {
         top: -15vw;
         left: 72.8%;
-        width: 27vw;
+        width: 26.8vw;
         height: 68vw
     }
 }
@@ -472,7 +472,7 @@ body {
         background: 0 / cover no-repeat url('../uploads/hexgroup_blue_tab.png');
         top: -4vw;
         left: 66%;
-        width: 34vw;
+        width: 33.5vw;
         height: 44vw
     }
 }
@@ -536,7 +536,7 @@ body {
         top: 80px;
 
         @include breakpoint(1366px) {
-            width: 16vw;
+            width: 15.8vw;
             left: 84%;
             height: 28vw;
             top: 18vw;

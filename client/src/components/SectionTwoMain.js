@@ -16,7 +16,7 @@ export default class SectionTwoMain extends Component {
         let list = [
             'Smart.bid Tracking',
             'Smart.bid Analytics',
-            'Smart.bid’s ad server',
+            'Smart.bid’s Ad Server',
             'Smart.bid RTB',
             'Smart.bid Affiliate Program',
         ]

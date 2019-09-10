@@ -129,8 +129,8 @@
     margin: auto 0;
 
     @include breakpoint(1366px) {
-        width: 4.95vw;
-        height: 4.95vw;
+        width: 3.95vw;
+        height: 3.95vw;
     }
 
     &:hover, :active {
@@ -161,7 +161,7 @@
         @include breakpoint(1366px) {
             width: 1.2vw;
             height: 1.2vw;
-            margin: 1.68vw;
+            margin: 1.2vw;
         }
     }
 }

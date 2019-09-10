@@ -4,17 +4,26 @@ import arrow from '../uploads/collapse_arrow.svg'
 
 
 export default class PrivacyPage extends Component {
-
+    constructor(props) {
+        super(props)
+    
+        this.Arrow = React.createRef();
+        this.handleLead = this.handleLead.bind(this);
+        this.handleCollapse = this.handleCollapse.bind(this);
+    }
+    
+    
     handleLead(e) {
         let sectionClass = e.target.getAttribute('value');
         let section = document.getElementById(sectionClass);
-        let sectionY = Math.abs(section.getBoundingClientRect().y - document.querySelector('.privacy_header').getBoundingClientRect().y);
-        document.querySelector('.privacy_menu').classList.contains('active') ? document.querySelector('.col_arrow').click() : void(0);
-            
+        let arrow = this.Arrow.current;
+        let sectionY = Math.abs(section.getBoundingClientRect().y - document.querySelector('.privacy_header').getBoundingClientRect().y - 10);
+        document.querySelector('.privacy_menu').classList.contains('active') ? arrow.click() : void(0);
+        arrow.click();
 
         window.scroll({
             top: sectionY, 
-            left: 0, 
+            left: 0,
             behavior: 'smooth'
           });
     }
@@ -32,15 +41,17 @@ export default class PrivacyPage extends Component {
 
     }
 
-    handleCollapse(e) {
-        if (e.target.classList.contains('off')) {
-            e.target.style.transform = "rotate(180deg)";
-            e.target.parentElement.classList.add('active');
-            e.target.classList.remove('off');
+    handleCollapse() {
+        let arrow = this.Arrow.current;
+
+        if (arrow.classList.contains('off')) {
+            arrow.style.transform = "rotate(180deg)";
+            arrow.parentElement.classList.add('active');
+            arrow.classList.remove('off');
         } else {
-            e.target.style.transform = "rotate(0deg)";
-            e.target.parentElement.classList.remove('active');
-            e.target.classList.add('off');
+            arrow.style.transform = "rotate(0deg)";
+            arrow.parentElement.classList.remove('active');
+            arrow.classList.add('off');
         }
     }
 
@@ -51,7 +62,7 @@ export default class PrivacyPage extends Component {
     render() {
         return (
             <div className="PrivacyPage">
-                <div className="privacy_menu">
+                <div className="privacy_menu" onClick={this.handleCollapse}>
                     <div className="privacy_link" onClick={this.handleLead} value="1">1. Data Collection</div>
                     <div className="privacy_link" onClick={this.handleLead} value="2">2. Data Uses</div>
                     <div className="privacy_link" onClick={this.handleLead} value="3">3. Data Location and Retention</div>
@@ -63,7 +74,7 @@ export default class PrivacyPage extends Component {
                     <div className="privacy_link" onClick={this.handleLead} value="9">9. Children’s Privacy</div>
                     <div className="privacy_link" onClick={this.handleLead} value="10">10. Data Controller/Processor</div>
                     <div className="privacy_link" onClick={this.handleLead} value="11">11. Additional Notices</div>
-                    <img className="col_arrow off" alt='arrow' src={arrow} onClick={this.handleCollapse}></img>
+                    <img className="col_arrow off" ref={this.Arrow} alt='arrow' src={arrow}></img>
                 </div>
                 <div className="privacy_left">
                     <div className="privacy_link" onClick={this.handleLead} value="1">1. Data Collection</div>
@@ -81,7 +92,7 @@ export default class PrivacyPage extends Component {
                 <div className="privacy_right">
                     <div className="policy_title">Privacy Policy</div>
                     <p><b>Effective Date: December 28 2018</b></p>
-                    <p>Smart Bid Ltd. (“<b>Smart.Bid</b>“, “<b>we</b>“, “<b>our</b>” or “<b>us</b>“) develops and provides marketing solution platforms (the <b>“Platform“</b>) that will help empower advertising teams and assist in delivering hyper-targeted ads across any device.</p>
+                    <p>Smart Bid Ltd. (“<b>Smart.Bid</b>“, “<b>we</b>“, “<b>our</b>” or “<b>us</b>“) develops and provides marketing solution platforms (the <b>“Platform”</b>) that will help empower advertising teams and assist in delivering hyper-targeted ads across any device.</p>
                     <p>Our Platform and our website (the “<b>Site</b>”) available at www.smart.bid  (together the <b>“Services”</b>) allow advertisers (our <b>“Customer”</b> and their staff “you” ) to harness huge amounts of data for customized and highly relevant online marketing campaigns as seen by End-Users.</p>
                     <p>We respect the privacy of our visitors, End-Users and Customers, and are strongly committed to making our practices regarding their personal data more transparent and fair. This Privacy Policy describes how we collect, store, use and disclose personal data regarding individuals who visit our Site (<b>“Visitors“</b>), or use our Services (<b>“Customers”</b>), and our role as “Data Processor” of End-Users’ data. It applies whenever you visit our Services, interact with us or otherwise access or use any of our Services.</p>
                     <p><b>Please read this Privacy Policy carefully and make sure that you fully understand and agree to it. If you do not agree to this Privacy Policy, please discontinue and avoid using our Services.</b></p>
@@ -99,14 +110,14 @@ export default class PrivacyPage extends Component {
                     <p><b id="2"> 2. Data Uses</b><br/>
                     We use Personal Data as necessary for the performance of our Services; to comply with applicable law; and to support our legitimate interests in maintaining and improving our Services and offerings, understanding how our Services are used, optimizing our marketing and advertising services, customer service and support operations, and protecting and securing our End-Users, Customers, ourselves and our Services.</p>
                     <p>Specifically, we use Personal Data for the following purposes:</p>
-                    <p>1. To facilitate, operate, and provide our Services;</p>
-                    <p>2. To authenticate the identity of our End-Users, and to allow them access to our Services;</p>
-                    <p>To provide our Visitors, End-Users and Customers with assistance and support;</p>
-                    <p>3. To further develop, customize and improve the Services and your End-User experience, based on common or personal preferences, experiences and difficulties;</p>
-                    <p>4. To contact our Visitors, End-Users and Customers with general or personalized service-related messages (such as password-retrieval or billing) and promotional messages (such as newsletters, webinars, new features, etc.); and to facilitate, sponsor and offer certain events and promotions;</p>
-                    <p>5. To support and enhance our data security measures, including for the purposes of preventing and mitigating the risks of fraud, error or any illegal or prohibited activity;</p>
-                    <p>6. To create aggregated statistical data, inferred non-personal data or anonymized or pseudonymized data (rendered non-personal), which we or our business partners may use to provide and improve our respective services; and</p>
-                    <p>7. To comply with any applicable laws and regulations.</p>
+                    <p>1. To facilitate, operate, and provide our Services;<br/>
+                    2. To authenticate the identity of our End-Users, and to allow them access to our Services;<br/>
+                    To provide our Visitors, End-Users and Customers with assistance and support;<br/>
+                    3. To further develop, customize and improve the Services and your End-User experience, based on common or personal preferences, experiences and difficulties;<br/>
+                    4. To contact our Visitors, End-Users and Customers with general or personalized service-related messages (such as password-retrieval or billing) and promotional messages (such as newsletters, webinars, new features, etc.); and to facilitate, sponsor and offer certain events and promotions;<br/>
+                    5. To support and enhance our data security measures, including for the purposes of preventing and mitigating the risks of fraud, error or any illegal or prohibited activity;<br/>
+                    6. To create aggregated statistical data, inferred non-personal data or anonymized or pseudonymized data (rendered non-personal), which we or our business partners may use to provide and improve our respective services; and<br/>
+                    7. To comply with any applicable laws and regulations.</p>
                     <p><b id="3">3. Data Location & Retention</b><br/>
                     <b>Data Location:</b> Your Personal Data may be maintained, processed and stored by our authorized affiliates and Service Providers (defined below) in the United States of America, the EU and other jurisdictions, as necessary for the proper delivery of our Services, or as may be required by law.</p>
                     <p>Smart.Bid is headquartered in Israel, a jurisdiction which is considered by the European Commission to be offering an adequate level of protection for the Personal Data of EU Member State residents.</p>

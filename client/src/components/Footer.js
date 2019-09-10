@@ -45,7 +45,7 @@ class Footer extends Component {
             emailField.classList.remove('email_inc');
             emailField.placeholder = 'Enter Your Email';
             
-            let inputs = [...document.querySelectorAll('.GetStarted, .RequestDemo')];
+            let inputs = [...document.querySelectorAll('.GetStarted, .RequestDemo, .RequestDemoAlt')];
             inputs.forEach((input) => {
                 input.classList.add('inactive');
             })
@@ -84,7 +84,7 @@ class Footer extends Component {
                 let random = 500 + Math.random() * 1000;
                 setTimeout(() => {bottompoly.classList.remove('hidden')}, random);
             });
-            let bottomGetStarted = document.body.querySelector('.bottom_section > .section_one_bottom > .GetStarted');
+            let bottomGetStarted = document.body.querySelector('.bottom_section > .section_one_bottom > .BottomTitle > .GetStarted');
             setTimeout(() => {   
                 bottomGetStarted.classList.remove('hidden');
                 bottomGetStarted.style.animation = "textslide 0.25s 1";
@@ -115,14 +115,13 @@ class Footer extends Component {
                 <ThankYou />
                 <div className="section_one_bottom">
                     <BottomTitle show={this.state.show}/>
-                    <GetStarted />
                 </div>
                 <div className="section_footer desk">
-                    <a href="/"><div className="bottomLogo hidden_alt slide"><img src={logo} alt='logo'></img></div></a>
+                    <a className="blogo_wrapper" href="/"><div className="bottomLogo hidden_alt slide"><img src={logo} alt='logo'></img></div></a>
                     <div className="bottomInfo hidden_alt slide">
                         <a className="info_bar" href="/privacy"><img src={lock} alt='lock'></img><span>Privacy policy</span></a>
                         <span className="info_bar"><img src={point} alt='point'></img><span>Yigal Alon 94, Tel-Aviv, Israel</span></span>
-                        <span className="info_bar"><img src={envelope} alt='envelope'></img><span>contact@smart.bid</span></span>
+                        <span className="info_bar"><img src={envelope} alt='envelope'></img><a href='mailto:contact@smart.bid'>contact@smart.bid</a></span>
                         <img className="privacy_img" src={privacy} alt='stamp'></img>
                     </div>
                 </div>

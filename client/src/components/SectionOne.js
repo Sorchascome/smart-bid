@@ -18,14 +18,14 @@ export default class SectionOne extends Component {
 
         this.elementsAppear = this.elementsAppear.bind(this);
     }
-    
+
     elementsAppear() {
         let element = document.querySelector('.SectionOne');
         let elemEnd = Math.abs((element.getBoundingClientRect().y + element.getBoundingClientRect().height/2) - document.body.getBoundingClientRect().y);
 
         if(window.scrollY < elemEnd  || this.state.show === true) {
             this.setState({show: true});
-            let polys = [...document.body.querySelectorAll('.SectionOne > .poly, .polysmall, .hexgroup_top')];
+            let polys = [...document.body.querySelectorAll('.SectionOne > .poly, .polysmall, .hexgroup_top, .polytrans')];
             polys.forEach((poly) => {
                 let random = Math.random() * 300;
                 setTimeout(() => {poly.classList.remove('hidden')}, random);
@@ -68,7 +68,7 @@ export default class SectionOne extends Component {
                 <span className="polysmall second hidden slide"></span>
                 <span className="polysmall third hidden slide"></span>
                 <span className="polysmall fourth hidden slide"></span>
-                <span className="polytrans slide"></span>
+                <span className="polytrans hidden slide"></span>
                 <span className="hexgroup_top hidden slide"></span>
             </div>
         )

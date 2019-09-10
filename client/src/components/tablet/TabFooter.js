@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 // Components
 import BottomTitle from '../BottomTitle'
-import GetStarted from './GetStarted'
 import ThankYou from '../ThankYou'
 
 // Images
@@ -20,7 +19,6 @@ export default class SectionOne extends Component {
                 <ThankYou />
                 <div className="section_one_bottom">
                     <BottomTitle/>
-                    <GetStarted />
                 </div>
                 <div className="section_footer">
                     <div className="bottomLogo hidden_alt slide"><img src={logo} alt='logo'></img></div>
@@ -30,7 +28,7 @@ export default class SectionOne extends Component {
                             <img className="privacy_img" src={privacy} alt='stamp'></img>
                         </div>
                         <div>
-                            <span className="info_bar"><img src={envelope} alt='envelope'></img><span>contact@smart.bid</span></span>
+                            <span className="info_bar"><img src={envelope} alt='envelope'></img><a href='mailto:contact@smart.bid'>contact@smart.bid</a></span>
                             <a className="info_bar" href="privacy/index.html"><img src={lock} alt='lock'></img><span>Privacy policy</span></a>
                         </div>
                     </div>

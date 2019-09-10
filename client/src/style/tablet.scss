@@ -81,7 +81,7 @@
 }
 
 .TabTopPanel {
-    position: relative;
+    position: absolute;
     display: flex;
     top: 0px;
     width: 100%;
@@ -212,6 +212,7 @@
 
     @include breakpoint(767px) {
         width: 86%;
+        padding: 10vw 0;
     }
 }
 

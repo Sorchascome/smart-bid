@@ -12,12 +12,12 @@
     position: relative;
     display: flex;
     width: 10vw;
-    height: 10vw;
+    height: 4vw;
     left: 10vw;
-    top: 0;
+    top: 2.4vw;
     z-index: 3;
 
-    background: center / contain no-repeat url('../uploads/logo-white2.png');
+    background: center / cover no-repeat url('../uploads/logo-white2.png');
 }
 
 .section_one_top {
@@ -32,19 +32,20 @@
     flex-direction: column;
     height: fit-content;
     width: 60%;
-    height: 50%;
+    height: 40%;
     margin: auto;
     z-index: 1;
 
     @include breakpoint(1366px) {
         width: 76%;
+        height: auto;
     }
 }
 
 .TopPanel {
     position: relative;
     display: flex;
-    left: 38%;
+    left: 36%;
     top: 4vw;
     width: 45%;
     z-index: 12;
@@ -143,7 +144,8 @@
     @include breakpoint(1366px) {
         width: 56vw;
         height: 6vw;
-        font-size: 1.8vw
+        font-size: 1.8vw;
+        margin: 15px auto;
     }
 
     @include breakpoint(767px) {
@@ -206,7 +208,7 @@
     border-radius: 0px 5px 5px 0px;
     border: none;
     text-overflow: ellipsis;
-    // transition: all 0.3s;
+    transition: filter 0.3s;
 
     &:hover, :active {
         filter: brightness(115%);
@@ -221,7 +223,7 @@
     @include breakpoint(1366px) {
         font-size: 1.8vw;
         width: 20vw;
-        height: 6.191vw;
+        height: 6.26vw;
       }
 
     @include breakpoint(767px) {

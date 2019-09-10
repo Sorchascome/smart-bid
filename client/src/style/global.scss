@@ -230,7 +230,7 @@ body {
     background: center / contain no-repeat url('../uploads/polytrans.png');
     background-size: 7.6vw;
     position: absolute;
-    left: 84%;
+    left: 90%;
     width: 140px;
     height: 140px;
     top: -2%;
@@ -318,6 +318,7 @@ body {
     width: 31vw;
     height: 18vw;
     border-radius: 2px;
+    box-shadow: -3px 3px 29px 1px rgba(0,0,0,0.4);
 
     @include breakpoint(1366px) {
         width: 37.8vw;
@@ -340,14 +341,14 @@ body {
 
         @include breakpoint(1366px) {
             left: 50vw;
-            top: 332vw;
-            // filter: none;
+            top: 332vw; 
         }
 
         @include breakpoint(767px) {
             top: 78vw;
             left: 30vw;
             z-index: 4;
+            filter: none;
         }
     }
 

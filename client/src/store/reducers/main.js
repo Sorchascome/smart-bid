@@ -12,6 +12,7 @@ const mainReducer = (state = [], {type, payload}) => {
           console.log(res)
           return res
         })
+        break
       default:
         return state
     }

@@ -3,10 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import { sendEmail } from '../store/actions/main'
 
-
 // Components
 import BottomTitle from './BottomTitle'
-import GetStarted from './GetStarted'
 import ThankYou from './ThankYou'
 
 // Images

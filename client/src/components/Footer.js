@@ -38,7 +38,8 @@ class Footer extends Component {
     handleGetStarted(e) {
         let emailField = e.target.previousSibling;
         if(validateEmail(emailField.value)) {
-            this.props.sendEmail(emailField.value);
+            let valueToSend = emailField.value;
+            this.props.sendEmail(valueToSend);
             emailField.value = '';
             emailField.classList.remove('email_inc');
             emailField.placeholder = 'Enter Your Email';

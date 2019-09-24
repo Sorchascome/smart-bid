@@ -1,7 +1,7 @@
 import {SEND_EMAIL} from '../actions/constants'
 import axios from 'axios'
 
-const mainReducer = (state = [], {type, payload}) => {
+const mainReducer = (state = {}, {type, payload}) => {
     switch (type) {
       case SEND_EMAIL:
         axios.post('https://platform-api.smart.bid/contact2', {		
@@ -9,10 +9,9 @@ const mainReducer = (state = [], {type, payload}) => {
             'email': payload
         })
         .then(res => {
-          console.log(res)
-          return res
+          return res.data.message
         })
-        break
+        .catch(err => {return err})
       default:
         return state
     }

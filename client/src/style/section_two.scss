@@ -222,9 +222,10 @@
 }
 
 .menu_item_image {
-    width: 72px;
-    height: 64px;
+    width: 82px;
+    height: 74px;
     display: flex;
+    margin: 0 auto;
 
     & .active {
         object-position: 0%;

@@ -156,6 +156,7 @@ body {
         height: 620px;
         left: 78%;
         top: 300px;
+        z-index: 2;
     }
 
     &.second {
@@ -165,16 +166,6 @@ body {
         left: -7%;
         top: -100px;
         transform: rotate(90deg);
-    }
-
-    &.third {
-        width: 200px;
-        height: 200px;
-        background-size: 10vw;
-        left: 32%;
-        top: -65px;
-        transform: rotate(90deg);
-        opacity: 0.5;
     }
 
     &.fourth {
@@ -192,7 +183,7 @@ body {
     background: center / contain no-repeat url('../uploads/polysmall.png');
     position: absolute;
     background-size: 7.6vw;
-    z-index: 1;
+    z-index: 2;
 
     &.first {
         background-size: 6vw;
@@ -215,7 +206,6 @@ body {
         height: 140px;
         left: 12%;
         top: 580px;
-        opacity: 0.5;
     }
 
     &.fourth {
@@ -224,16 +214,6 @@ body {
         left: 65%;
         top: 820px;
     }
-}
-
-.polytrans {
-    background: center / contain no-repeat url('../uploads/polytrans.png');
-    background-size: 7.6vw;
-    position: absolute;
-    left: 90%;
-    width: 140px;
-    height: 140px;
-    top: -2%;
 }
 
 .hexgroup {
@@ -255,7 +235,6 @@ body {
     position: absolute;
     overflow: hidden;
 
-
     &.first {
         width: 27.6vw;
         height: 960px;
@@ -264,8 +243,9 @@ body {
     }
 
     &.second {
-        background: 0 / contain no-repeat url('../uploads/hexgroup_blue.png'); 
-        filter: hue-rotate(-25deg) brightness(60%);
+        background: 0 / contain no-repeat url('../uploads/hexgroup_blue.png');
+        filter: grayscale(100%);
+        opacity: 0.1;
         width: 40vw;
         height: 900px;
         left: 0;
@@ -337,7 +317,6 @@ body {
         top: 725px;
         left: 150px;
         z-index: 3;
-        filter: brightness(92%);
 
         @include breakpoint(1366px) {
             left: 50vw;
@@ -651,8 +630,8 @@ body {
     position: absolute;
     overflow: hidden;
     width: 99vw;
-    height: 58vw;
-    z-index: 0;
+    height: 62vw;
+    z-index: 1;
 }
 
 .inactive {

@@ -4,7 +4,6 @@
     width: 100%;
     height: 940px;
     left: 0px;
-    background: #051C33;
     flex-direction: column;
 }
 
@@ -16,7 +15,7 @@
     left: 10vw;
     top: 2.4vw;
     z-index: 3;
-
+    filter: invert(100%);
     background: center / cover no-repeat url('../uploads/logo-white2.png');
 }
 
@@ -25,16 +24,18 @@
     flex-direction: row;
     height: fit-content;
     width: auto;
+    z-index: 3;
 }
 
 .section_one_bottom {
     display: flex;
     flex-direction: column;
     height: fit-content;
+    color: #000;
     width: 60%;
     height: 40%;
     margin: auto;
-    z-index: 1;
+    z-index: 3;
 
     @include breakpoint(1366px) {
         width: 76%;
@@ -49,7 +50,7 @@
     top: 4vw;
     width: 45%;
     z-index: 12;
-
+    color: #000;
     height: fit-content;
     justify-content: space-around;
 
@@ -64,10 +65,8 @@
     // line-height: 63px;
     /* or 115% */
     // text-shadow: 0px 0px 90px rgba(0, 0, 0, 1);
-    filter: drop-shadow(0 0 6rem #000000);
     text-align: center;
-
-    color: #FFFFFF;
+    color: #000;
 }
 
 .top_title {
@@ -89,7 +88,7 @@
 
 .top_subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-size: 21px;
+    font-size: 30px;
     line-height: 293%;
 
     @include breakpoint(1366px) {
@@ -105,12 +104,11 @@
     font-weight: 500;
     line-height: 25px;
     /* identical to box height */
-    text-shadow: 0px 0px 2px #000000;
+    color: #000;
     opacity: 1;;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #FFFFFF;
     transition: all 0.3 ease-in-out;
 
     &:after {
@@ -138,7 +136,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    margin: 50px auto;
+    margin: 25px auto;
     z-index: 3;
 
     @include breakpoint(1366px) {
@@ -194,7 +192,7 @@
 .button_get_started {
     cursor: pointer;
     display: flex;
-    width: 355px;
+    width: 255px;
     height: 65px;
     color: #FFFFFF;
     margin-right: 0;
@@ -204,8 +202,10 @@
     font-size: 18px;
     align-items: center;
     text-align: center;
-    background: #F88634;
-    border-radius: 0px 5px 5px 0px;
+    background: rgb(248, 134, 52);
+    font-weight: 600;
+    z-index: 5;
+    border-radius: 5px;
     border: none;
     text-overflow: ellipsis;
     transition: filter 0.3s;

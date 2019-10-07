@@ -44,7 +44,7 @@ export default class SectionFive extends Component {
                     </div>
                     <div className="SectionTwoMain_bottom">
                         <MenuItem show={this.state.show} id={7} delay={3} icon={''} title={'Services for Brands'} text={'With Smart.bid, you can place AI-powered decision making at the heart of your brand choices, to fuel better conversion rates and improved customer retention.'}/>
-                        <RequestDemo show={this.state.show} id={1} title={'Case studies'} button={'Receive further details'}/>
+                        <RequestDemo show={this.state.show} id={1} title={'Case studies'} button={'Request a Demo'}/>
                     </div>
                 </div>
             </div>

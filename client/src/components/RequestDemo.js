@@ -14,13 +14,7 @@ export default class RequestDemo extends Component {
     render() {
         return (
             <div className={"hidden_alt slide RequestDemo rqd" + this.props.id}>
-                <div className="demo_title">
-                    {this.props.title}
-                </div>
-                <div className="demo_input">
-                    <input className="inputfield_email" type="email" placeholder="Enter Your Email"></input>
-                    <button className="button_get_started"><span>{this.props.button}</span></button>
-                </div>
+                <button className="button_get_started"><span>{this.props.button}</span></button>
             </div>
         )
     }

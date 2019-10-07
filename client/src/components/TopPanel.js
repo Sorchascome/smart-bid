@@ -14,16 +14,6 @@ export default class TopPanel extends Component {
         let panelY = Math.abs(panel.getBoundingClientRect().y - document.querySelector('.SectionOne.top').getBoundingClientRect().y);
         let sectionOneEnding = document.querySelector('.SectionOne.top').getBoundingClientRect().height;
         let footerStart = Math.abs(document.querySelector('.bottom_section.desk').getBoundingClientRect().y - document.querySelector('.SectionOne.top').getBoundingClientRect().y);
-
-        if((panelY > sectionOneEnding) && (panelY < footerStart)) {
-            panelLinks.forEach((link) => {
-                link.style.color = 'black'
-            })
-        } else {
-            panelLinks.forEach((link) => {
-                link.style.color = 'white'
-            })
-        }
     }
 
     handleClick(e) {

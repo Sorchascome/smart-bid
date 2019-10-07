@@ -101,10 +101,10 @@ class Footer extends Component {
     componentDidMount() {
         componentAppears(this, this.elementsAppear);
 
-        let buttons = [...document.querySelectorAll('.button_get_started')];
-        buttons.forEach((button) => {
-            button.addEventListener("click", this.handleGetStarted);
-        })
+        // let buttons = [...document.querySelectorAll('.button_get_started')];
+        // buttons.forEach((button) => {
+        //     button.addEventListener("click", this.handleGetStarted);
+        // })
     }
 
 

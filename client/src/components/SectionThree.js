@@ -54,7 +54,6 @@ export default class SectionThree extends Component {
                 <span className="graph second hidden_elems hidden_alt slide"></span>
                 <span className="hexgroup_large first hidden_elems hidden_alt slide"></span>
                 <span className="hexgroup_large second hidden_elems hidden_alt slide"></span>
-                <span className="hex_large first hidden_elems hidden_alt slide"></span>
             </div>
         )
     }

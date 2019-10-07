@@ -6,10 +6,14 @@ import MenuListItem from './MenuListItem'
 import RequestDemo from './RequestDemoAlt'
 
 // Icons
-import ai from '../uploads/bi.svg'
-import diamond from '../uploads/ci.svg'
-import cloud from '../uploads/mth.svg'
-import glass from '../uploads/serv.svg'
+import ai from '../uploads/bi.gif'
+import diamond from '../uploads/ci.gif'
+import cloud from '../uploads/hub.gif'
+import glass from '../uploads/serv.gif'
+import aist from '../uploads/bi_st.jpg'
+import diamondst from '../uploads/ci_st.jpg'
+import cloudst from '../uploads/hub_st.jpg'
+import glassst from '../uploads/serv_st.jpg'
 
 export default class SectionTwoMain extends Component {
     render() {
@@ -25,15 +29,15 @@ export default class SectionTwoMain extends Component {
         return (
             <div className="SectionTwoMain alt">
                 <div className="SectionTwoMain_column">
-                    <MenuItem show={this.props.show} id={0} delay={0} hasIcon={true} icon={ai} title={'Predictive BI Platform'} text={'Our unified BI hub helps you visualize today’s most important business insights and predict tomorrow’s customer behavior.'}/>
-                    <MenuItem show={this.props.show} id={1} delay={3} hasIcon={true} icon={glass} title={'Prediction As A Service'} text={'Connect your existing data stream to our best-in-class predictive technology. Optimize your business with prediction-driven decisions. '}/>
+                    <MenuItem show={this.props.show} id={0} delay={0} hasIcon={true} icon={ai} static={aist} title={'Predictive BI Platform'} text={'Our unified BI hub helps you visualize today’s most important business insights and predict tomorrow’s customer behavior.'}/>
+                    <MenuItem show={this.props.show} id={1} delay={3} hasIcon={true} icon={glass} static={glassst} title={'Prediction As A Service'} text={'Connect your existing data stream to our best-in-class predictive technology. Optimize your business with prediction-driven decisions. '}/>
                 </div>
                 <div className="SectionTwoMain_column">
-                    <MenuListItem list={list} show={this.props.show} id={2} delay={1} hasIcon={true} icon={cloud} title={'MarTechHub'} text={'Our next-generation marketing technology, combined with Predictive BI, enables brands to plan, buy, analyze, predict and automate the entire marketing cycle with:'}/>
+                    <MenuListItem list={list} show={this.props.show} id={2} delay={1} hasIcon={true} icon={cloud} static={cloudst} title={'MarTechHub'} text={'Our next-generation marketing technology, combined with Predictive BI, enables brands to plan, buy, analyze, predict and automate the entire marketing cycle with:'}/>
                 </div>
                 <div className="SectionTwoMain_column">
-                    <MenuItem show={this.props.show} id={3} delay={2} hasIcon={true} icon={diamond} title={'Predictive CI Platform'} text={'Predict your customer’s next move. Automate your marketing with personalized dynamic messaging to reach high-value customers in the right way, at the right time, and on the right channel.'}/>
-                    <RequestDemo show={this.props.show} id={0} title={'Request a demo'} button={'Get started'}/>
+                    <MenuItem show={this.props.show} id={3} delay={2} hasIcon={true} icon={diamond} static={diamondst} title={'Predictive CI Platform'} text={'Predict your customer’s next move. Automate your marketing with personalized dynamic messaging to reach high-value customers in the right way, at the right time, and on the right channel.'}/>
+                    <RequestDemo show={this.props.show} id={0} title={'Request a demo'} button={'Request a Demo'}/>
                 </div>
             </div>
         )

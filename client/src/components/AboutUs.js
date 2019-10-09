@@ -26,6 +26,10 @@ export default class AboutUs extends Component {
         componentAppears(this, this.elementsAppear);
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.elementsAppear);
+    }
+
     render() {
         return (
             <div className='AboutUs desk'>

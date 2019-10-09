@@ -20,7 +20,6 @@ export default class MobSectionFive extends Component {
                     <MenuItem id={5} delay={1} icon={''} title={'Gaming'} text={'Our platform is able to build a unified profile for each player, predict their customer value, and optimize marketing messaging to turn high-value players into whales.'}/> 
                 </div>
             </div>
-            <MenuItem id={5} delay={1} icon={''} title={'Gaming'} text={'Our platform is able to build a unified profile for each player, predict their customer value, and optimize marketing messaging to turn high-value players into whales.'}/>  
             <RequestDemo id={1} title={'Case studies'} button={'Receive further details'}/>
         </div>
         )

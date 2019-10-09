@@ -42,6 +42,10 @@ export default class TopPanel extends Component {
         document.addEventListener('scroll', this.handleScroll)
     }
 
+    componentWillUnmount() {
+        document.removeEventListener('scroll', this.handleScroll);
+    }
+
     render() {
         return (
             <div className='TopPanel slide hidden'>

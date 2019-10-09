@@ -7,6 +7,10 @@ export default class HomeArrow extends Component {
         window.addEventListener('scroll', this.arrowAppears);
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('scroll',  this.arrowAppears);
+    }
+
     arrowAppears() {
         let homeArrow =  document.querySelector('.HomeArrow');
         if(window.scrollY > 325) {

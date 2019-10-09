@@ -1,0 +1,152 @@
+.Regpage {
+
+    .reg_main {
+        padding: 0 11vw;
+
+        .regLogo {
+            margin: 2vw 0;
+            width: 8vw;
+        }
+
+        .reg_title {
+            font-family: Gilroy Bold;
+            letter-spacing: 0.1vw;
+            line-height: 110%;
+            font-size: 2.52vw;
+            margin-top: 8vw;
+        }
+
+        .reg_mid {
+            margin-bottom: 8vw;
+            display: inline-flex;
+
+            .reg_info {
+                margin: auto 6vw;
+
+                .reg_info_title {
+                    font-family: Gilroy Bold;
+                    letter-spacing: 0.075vw;
+                    font-size: 1.32vw;
+                }
+
+                p {
+                    font-family: Gilroy;
+                    font-weight: 600;
+                    font-size: 0.86vw;
+                    width: 70%;
+                    line-height: 150%;
+                    margin: 1.2vw 0;
+                }
+            }
+
+            .regform {
+                font-size: 0.92vw;
+                font-family: Gilroy;
+                font-weight: 600;
+                padding: 3.2vw 4vw;
+                margin-top: 3.2vw;
+                width: 32vw;
+                background-color: #fff;
+                box-shadow: 0px 0px 2vw 0px rgba(0,0,0,0.15);
+    
+                .button_get_started {
+                    margin: 2vw auto;
+                    margin-bottom: 0;
+                    height: 56px
+                }
+    
+                label {
+                    margin: 0;
+                }
+            
+                .form-control {
+                    font-size: 0.92vw;
+                    font-weight: 600;
+                    border: none;
+                    border-radius: 0;
+                    border-bottom: 1px solid rgb(114, 114, 114);
+                    margin-bottom: 2.4vw;
+    
+                    &:focus {
+                        border-bottom: 2px solid rgb(114, 114, 114);
+                        box-shadow: none;
+                    }
+    
+                }
+    
+                .reg_checkbox {
+                    background-color: #fff;
+                    padding-left: 0;
+    
+                    .custom-control-label {
+    
+                        &::before {
+                            width: 1vw;
+                            height: 1vw;
+                            border-radius: 0;
+                        }
+    
+                        &::after {
+                            width: 1vw;
+                            height: 1vw;
+                            border-radius: 0;
+                        }
+    
+                    }
+    
+                    .custom-control-input:focus ~ .custom-control-label {
+                        &::before {
+                            box-shadow: none;
+                            border-color: #6e6e6e;
+                        }
+                    }
+    
+                    .custom-control-input:checked ~ .custom-control-label {
+    
+                        &::before {
+                            color: #fff;
+                            border-color: #6e6e6e;
+                            background-color: #6e6e6e;
+                        }
+    
+                        &::after {
+                            background-size: 70%;
+                        }
+    
+                    }
+    
+                }
+    
+                .reg_formtext {
+                    color: rgb(100, 100, 100) !important;
+                    margin-top: 0;
+                    font-size: 0.75vw;
+                    line-height: 125%;
+                    text-align: justify;
+                    padding-left: 0.5vw;
+                }
+    
+                .reg_tel_input {
+                    font-family: Gilroy;
+                    font-size: 1vw;
+                    font-weight: 600;
+                    width: 100%;
+                }
+    
+                .react-tel-input .reg_tel_dd {
+                    background: none;
+                    border: none;
+    
+                    :focus,:hover {
+                        background: none;
+                        border: none;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+}
+

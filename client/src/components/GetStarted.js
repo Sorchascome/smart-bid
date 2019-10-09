@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class GetStarted extends Component {
     componentDidUpdate() {
@@ -14,7 +15,9 @@ export default class GetStarted extends Component {
     render() {
         return (
             <div className="GetStarted hidden slide">
-                <button className="button_get_started"><span>Request a Demo</span></button>
+                <Link to='/request'>
+                    <button className="button_get_started"><span>Request a Demo</span></button>
+                </Link>
             </div>
         )
     }

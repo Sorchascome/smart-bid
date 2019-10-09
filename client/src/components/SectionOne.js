@@ -47,6 +47,10 @@ export default class SectionOne extends Component {
         }
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.elementsAppear);
+    }
+
 
     render() {
         return (

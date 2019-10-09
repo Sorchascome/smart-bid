@@ -77,13 +77,13 @@
 }
 
 .section_footer {
-    width: 80%;
     background-color: #071E35;
     height: max-content;
     padding: 0 10%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 3;
 
     @include breakpoint(767px) {
         flex-direction: column;

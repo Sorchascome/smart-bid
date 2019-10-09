@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class RequestDemo extends Component {
     componentDidUpdate() {
@@ -14,7 +15,9 @@ export default class RequestDemo extends Component {
     render() {
         return (
             <div className={"hidden_alt slide RequestDemoAlt rqd" + this.props.id}>
-                <button className="button_get_started"><span>{this.props.button}</span></button>
+                <Link to='/request'>
+                    <button className="button_get_started"><span>{this.props.button}</span></button>
+                </Link>
             </div>
         )
     }

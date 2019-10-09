@@ -15,6 +15,10 @@ a {
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
 }
 
 @font-face {
@@ -564,7 +568,7 @@ body {
         height: 620px;
         left: -18%;
         top: 360px;
-        z-index: 3;
+        z-index: 1;
     }
 }
 

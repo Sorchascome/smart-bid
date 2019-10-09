@@ -29,6 +29,10 @@ export default class SectionTwo extends Component {
         componentAppears(this, this.elementsAppear);
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.elementsAppear);
+    }
+
     render() {
         return (
             <div className="SectionTwo">

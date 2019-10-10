@@ -23,7 +23,7 @@ export default class SectionOne extends Component {
         let element = document.querySelector('.SectionOne');
         let elemEnd = Math.abs((element.getBoundingClientRect().y + element.getBoundingClientRect().height/2) - document.body.getBoundingClientRect().y);
 
-        if(window.scrollY < elemEnd  || this.state.show === true) {
+        if (window.scrollY < elemEnd || this.state.show === true) {
             this.setState({show: true});
             let polys = [...document.body.querySelectorAll('.SectionOne > .poly, .polysmall, .hexgroup_top')];
             polys.forEach((poly) => {
@@ -34,7 +34,6 @@ export default class SectionOne extends Component {
         }
     }
     
-
     componentDidMount() {
         let element = document.querySelector('.SectionOne');
         let elemStart = Math.abs(element.getBoundingClientRect().y - document.body.getBoundingClientRect().y);
@@ -50,7 +49,6 @@ export default class SectionOne extends Component {
     componentWillUnmount() {
         window.removeEventListener('scroll', this.elementsAppear);
     }
-
 
     render() {
         return (

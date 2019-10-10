@@ -15,7 +15,7 @@ export default class Regform extends Component {
                 </FormGroup>
                 <FormGroup>
                     <Label for="lname">Last Name*</Label>
-                    <Input type="lname" name="email" id="lname" />
+                    <Input name="lname" id="lname" />
                 </FormGroup>
                 <FormGroup>
                     <Label for="email">Business Email Adress*</Label>

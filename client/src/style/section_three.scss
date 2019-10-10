@@ -5,7 +5,7 @@
     height: fit-content;
     background: #ffffff;
     left: 0px;
-    margin-bottom: 55vw;
+    margin-bottom: 50vw;
 }
 
 .Technology {
@@ -66,7 +66,7 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 223%;
     width: 80%;
     /* or 31px */
@@ -108,7 +108,7 @@
     &:before {
         content: '●';
         color: #029ED6;
-        margin: 0.5vw;
+        margin: 0.2vw;
 
         @include breakpoint(767px) {
             margin: 2.5vw;
@@ -121,7 +121,7 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 200%;
     margin-top: 4vw;
 

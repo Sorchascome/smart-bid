@@ -29,9 +29,10 @@ export default class SectionThree extends Component {
             this.setState({show: true});
             let hexes = [...document.body.querySelectorAll('.SectionThree > .hexgroup_large, .hex_large')];
             let graphs = [...document.body.querySelectorAll('.SectionThree > .graph')];
-            let graphcount = 1200;
+            let graphcount = 1200;  
             hexes.forEach((hex) => {
                 setTimeout(() => {hex.classList.remove('hidden_alt')}, 300);
+                
             });
             graphs.forEach((graph) => {
                 setTimeout(() => {graph.classList.remove('hidden_alt')}, graphcount);

@@ -52,17 +52,19 @@ const ClientsPanel = (props) => {
     });
 
     return (
-    <Carousel
-        style={{overflow: 'hidden'}}
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}>
+        <div style={{overflow: 'hidden', opacity: (props.show ? 1 : 0), transition: 'opacity 2s ease'}}>
+            <Carousel
 
-        {slides}
+                activeIndex={activeIndex}
+                next={next}
+                previous={previous}>
 
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
+                {slides}
+
+                <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+                <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+            </Carousel>
+        </div>
     )
 }
 

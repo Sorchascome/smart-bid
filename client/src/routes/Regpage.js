@@ -8,6 +8,10 @@ import logo from '../uploads/reglogo.png'
 import background from '../uploads/regbg.png'
 
 export default class Regpage extends Component {
+    componentDidMount() {
+        
+    }
+
     render() {
         return (
             <div className='Regpage' style={{backgroundImage: 'url('+background+')', backgroundSize: 'cover'}}>

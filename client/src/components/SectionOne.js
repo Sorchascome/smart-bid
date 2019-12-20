@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 /* eslint-disable */
 // Components
 import SBlogo from './SBlogo'
@@ -7,69 +8,35 @@ import TopTitle from './TopTitle'
 import GetStarted from './GetStarted'
 import HomeArrow from './HomeArrow'
 
-export default class SectionOne extends Component {
-    constructor(props) {
-        super(props);
+// HOC
+import withElementsAppear from './withElementsAppear'
 
-        this.state = {
-            show: false,
-            class: '.SectionOne'
-        }
+class SectionOne extends Component {
 
-        this.elementsAppear = this.elementsAppear.bind(this);
-    }
-
-    elementsAppear() {
-        let element = document.querySelector('.SectionOne');
-        let elemEnd = Math.abs((element.getBoundingClientRect().y + element.getBoundingClientRect().height/2) - document.body.getBoundingClientRect().y);
-
-        if (window.scrollY < elemEnd || this.state.show === true) {
-            this.setState({show: true});
-            let polys = [...document.body.querySelectorAll('.SectionOne > .poly, .polysmall, .hexgroup_top')];
-            polys.forEach((poly) => {
-                let random = Math.random() * 300;
-                setTimeout(() => {poly.classList.remove('hidden')}, random);
-            });
-            window.removeEventListener('scroll', this.elementsAppear);
-        }
-    }
-    
-    componentDidMount() {
-        let element = document.querySelector('.SectionOne');
-        let elemStart = Math.abs(element.getBoundingClientRect().y - document.body.getBoundingClientRect().y);
-
-        if (window.scrollY > elemStart) {
-            window.addEventListener('scroll', this.elementsAppear);
-        } else {
-            this.setState({show: true});
-            this.elementsAppear();
-        }
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.elementsAppear);
+    componentDidUpdate() {
+        if (this.props.isVisible) this.props.elementsAppear(this.Section)
     }
 
     render() {
+        const pollies = ['first', 'second', 'third']
+
         return (
-            <div className='SectionOne top'>
+            <div className='SectionOne top' ref = {ref => this.Section = ref}>
                 <div className="section_one_top">
-                <a href="/"><SBlogo show={this.state.show} /></a>
+                <Link to="/"><SBlogo show={this.props.isVisible} /></Link>
                     <TopPanel show={true}/>
                 </div>
                 <div className="section_one_bottom">
-                    <TopTitle show={this.state.show}/>
-                    <GetStarted show={this.state.show}/>
+                    <TopTitle />
+                    <GetStarted />
                 </div>
                 <HomeArrow />
-                <span className="poly first hidden slide"></span>
-                <span className="poly second hidden slide"></span>
-                <span className="poly fourth hidden slide"></span>
-                <span className="polysmall second hidden slide"></span>
-                <span className="polysmall third hidden slide"></span>
-                <span className="polysmall fourth hidden slide"></span>
+                {pollies.map(polly => <span key={polly} className={"poly " + polly + " hidden slide"}></span>)}
+                {pollies.map(polly => <span key={polly} className={"polysmall " + polly + " hidden slide"}></span>)}
                 <span className="hexgroup_top hidden slide"></span>
             </div>
         )
     }
 }
+
+export default withElementsAppear(SectionOne)

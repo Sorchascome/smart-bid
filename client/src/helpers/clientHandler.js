@@ -36,40 +36,33 @@ import hms from '../uploads/clients/Hide-my-Ass.png'
 import blogo from '../uploads/clients/blogo.png'
 import cor from '../uploads/clients/Coral.png'
 
+let one = [
+    {name: 'MoPlay', image: mop},
+    {name: 'Loanmax', image: lmax},
+    {name: 'William Hill', image: whill},
+    {name: 'ExpressVPN', image: evpn},
+    {name: 'surfshark', image: shark},
+    {name: 'Ladbrokes', image: lbrk},
+    {name: '777', image: seven},
+    {name: '888', image: eight},
+    {name: '888-casino', image: eightcas},
+    {name: 'BrandLogos', image: blog},
+    {name: 'PureVPN', image: puvpn},
+    {name: 'AVAtrade', image: ava}
+],
+two = [
+    {name: 'Sportnation', image: snat},
+    {name: 'Betway', image: betw},
+    {name: 'Ivacy', image: iva},
+    {name: 'Betway2', image: betwc},
+    {name: 'OJO', image: ojo},
+    {name: 'Mansion', image: mbet},
+    {name: 'Sky-Bet', image: sky},
+    {name: 'Betfred', image: bfr},
+    {name: 'hide-my-ass', image: hms},
+    {name: 'blogo', image: blogo},
+    {name: 'Coral', image: cor},
+    {name: 'Bethard', image: beth},
+]
 
-export function clientHandler(position) {
-    let items = [];
-    if (position) {
-        items = [
-            {name: 'MoPlay', image: mop},
-            {name: 'Loanmax', image: lmax},
-            {name: 'William Hill', image: whill},
-            {name: 'ExpressVPN', image: evpn},
-            {name: 'surfshark', image: shark},
-            {name: 'Ladbrokes', image: lbrk},
-            {name: '777', image: seven},
-            {name: '888', image: eight},
-            {name: '888-casino', image: eightcas},
-            {name: 'BrandLogos', image: blog},
-            {name: 'PureVPN', image: puvpn},
-            {name: 'AVAtrade', image: ava}
-        ]
-    } else {
-        items = [
-            {name: 'Sportnation', image: snat},
-            {name: 'Betway', image: betw},
-            {name: 'Ivacy', image: iva},
-            {name: 'Betway2', image: betwc},
-            {name: 'OJO', image: ojo},
-            {name: 'Mansion', image: mbet},
-            {name: 'Sky-Bet', image: sky},
-            {name: 'Betfred', image: bfr},
-            {name: 'hide-my-ass', image: hms},
-            {name: 'blogo', image: blogo},
-            {name: 'Coral', image: cor},
-            {name: 'Bethard', image: beth},
-        ]
-    }
-
-    return items;
-}
+export default [one, two]

@@ -30,6 +30,7 @@
 .section_one_bottom {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: fit-content;
     color: #000;
     width: 60%;
@@ -74,7 +75,8 @@
     font-size: 72px;
     width: 80%;
     margin: auto;
-
+    line-height: 110%;
+    
     & span {
         position: relative;
         // overflow: hidden;
@@ -133,9 +135,9 @@
 }
 
 .GetStarted {
+    justify-content: center;
     position: relative;
     display: flex;
-    flex-direction: row;
     margin: 25px auto;
     z-index: 3;
 

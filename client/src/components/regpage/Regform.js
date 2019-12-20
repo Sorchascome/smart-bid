@@ -4,6 +4,18 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/dist/style.css'
 
 export default class Regform extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            fname: '',
+            lname: '',
+            email: '',
+            company: '',
+            title: '',
+            phone: ''
+        }
+    }
     
     render() {
         return (

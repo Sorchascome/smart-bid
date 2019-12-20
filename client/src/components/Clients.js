@@ -2,39 +2,19 @@ import React, { Component } from 'react'
 
 import OurClients from './OurClients'
 import ClientsPanel from './ClientsPanel'
+import withElementsAppear from './withElementsAppear'
 
-import { componentAppears } from '../helpers/componentAppears'
-import { elementHandler } from '../helpers/elementHandler'
+class Clients extends Component {
 
-export default class Clients extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            show: false,
-            class: '.Clients',
-        }
-
-        this.elementsAppear = this.elementsAppear.bind(this);
-    }
-    
-    elementsAppear() {
-        elementHandler(this, this.elementsAppear);
-    }
-
-    componentDidMount() {
-        componentAppears(this, this.elementsAppear);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.elementsAppear);
+    componentDidUpdate() {
+        if (this.props.isVisible) this.props.elementsAppear(this.Section)
     }
 
     render() {
         return (
-            <div className='Clients'>
-                <OurClients show={this.state.show} />
-                <ClientsPanel show={this.state.show} />                
+            <div className='Clients' ref = {ref => this.Section = ref}>
+                <OurClients show={this.props.isVisible} />
+                <ClientsPanel show={this.props.isVisible} />                
                 <span className="hexgroup_large_blue hidden_elems hidden_left slide"></span>
                 <span className="hex_part_blue hidden_elems hidden_right slide"></span>
                 <span className="polysmall_blue hidden_elems hidden_alt slide"></span>
@@ -42,3 +22,5 @@ export default class Clients extends Component {
         )
     }
 }
+
+export default withElementsAppear(Clients)

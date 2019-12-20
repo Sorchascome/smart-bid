@@ -4,62 +4,27 @@ import React, { Component } from 'react'
 import Technology from './Technology'
 import TechMenu from './TechMenu'
 
-// Helpers
-import { componentAppears } from '../helpers/componentAppears'
+// HOC
+import withElementsAppear from './withElementsAppear'
 
-export default class SectionThree extends Component {
-    constructor(props) {
-        super(props);
+class SectionThree extends Component {
 
-        this.state = {
-            show: false,
-            class: '.SectionThree'
-        }
-
-        this.elementsAppear = this.elementsAppear.bind(this);
-    }
-    
-    elementsAppear() {
-        let element = document.querySelector('.SectionThree');
-        let prevElemH = element.previousSibling.getBoundingClientRect().height;
-        let elemStart = Math.abs(element.getBoundingClientRect().y - prevElemH/2 - document.body.getBoundingClientRect().y);
-        let elemEnd = Math.abs((element.getBoundingClientRect().y + element.getBoundingClientRect().height) - document.body.getBoundingClientRect().y);
-
-        if((window.scrollY < elemEnd && window.scrollY > elemStart)  || this.state.show === true) {
-            this.setState({show: true});
-            let hexes = [...document.body.querySelectorAll('.SectionThree > .hexgroup_large, .hex_large')];
-            let graphs = [...document.body.querySelectorAll('.SectionThree > .graph')];
-            let graphcount = 1200;  
-            hexes.forEach((hex) => {
-                setTimeout(() => {hex.classList.remove('hidden_alt')}, 300);
-                
-            });
-            graphs.forEach((graph) => {
-                setTimeout(() => {graph.classList.remove('hidden_alt')}, graphcount);
-                graphcount += 300;
-            });
-            window.removeEventListener('scroll', this.elementsAppear);
-        }
-    }
-
-    componentDidMount() {
-        componentAppears(this, this.elementsAppear);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.elementsAppear);
+    componentDidUpdate() {
+        if (this.props.isVisible) this.props.elementsAppear(this.Section)
     }
 
     render() {
+        const pollies = ['first', 'second']
+
         return (
-            <div className="SectionThree">
-                <Technology show={this.state.show}/>
-                <TechMenu show={this.state.show}/>
-                <span className="graph first hidden_elems hidden_alt slide"></span>
-                <span className="graph second hidden_elems hidden_alt slide"></span>
-                <span className="hexgroup_large first hidden_elems hidden_alt slide"></span>
-                <span className="hexgroup_large second hidden_elems hidden_alt slide"></span>
+            <div className="SectionThree" ref = {ref => this.Section = ref}>
+                <Technology/>
+                <TechMenu show={this.props.isVisible}/>
+                {pollies.map(polly => <span key={polly} className={"graph " + polly + " hidden_alt slide"}></span>)}
+                {pollies.map(polly => <span key={polly} className={"hexgroup_large " + polly + " hidden_alt slide"}></span>)}
             </div>
         )
     }
 }
+
+export default withElementsAppear(SectionThree)

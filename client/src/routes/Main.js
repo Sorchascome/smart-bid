@@ -88,6 +88,11 @@ export default class Main extends Component {
     this.checkMobile(navigator.userAgent);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener("orientationchange", this.resizeHandler);
+    window.removeEventListener("resize", this.resizeHandler);
+  }
+
   render() {
       return (
         <Provider store={store} >

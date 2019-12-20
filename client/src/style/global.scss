@@ -189,14 +189,14 @@ body {
     background-size: 7.6vw;
     z-index: 2;
 
-    &.first {
-        background-size: 6vw;
-        width: 100px;
-        height: 100px;
-        left: 41.4%;
-        top: -15px;
-        opacity: 0.5;
-    }
+    // &.first {
+    //     background-size: 6vw;
+    //     width: 100px;
+    //     height: 100px;
+    //     left: 41.4%;
+    //     top: -15px;
+    //     opacity: 0.5;
+    // }
 
     &.second {
         width: 140px;
@@ -212,7 +212,7 @@ body {
         top: 580px;
     }
 
-    &.fourth {
+    &.first {
         width: 140px;
         height: 140px;
         left: 65%;

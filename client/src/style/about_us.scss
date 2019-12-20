@@ -28,10 +28,9 @@
     font-family: Gilroy Bold;
     font-size: 21px;
     line-height: 42px;
-
+    line-height: 110%;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-
     color: #029ED6;
 
     @include breakpoint(1366px) {

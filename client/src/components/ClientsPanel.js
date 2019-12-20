@@ -1,66 +1,69 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react';
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption
+} from 'reactstrap';
 
-// Components
-import ClientList from './ClientList'
+import items from '../helpers/clientHandler'
 
-import arrow from '../uploads/Vector.svg'
+const ClientsPanel = (props) => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [animating, setAnimating] = useState(false);
 
-// Helpers
-import { clientHandler } from '../helpers/clientHandler'
-
-export default class ClientsPanel extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            items: clientHandler(true),
-            position: true
-        }
-
-        this.arrowHandler = this.arrowHandler.bind(this);
+    const next = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
     }
 
-    arrowHandler() {
-        let arrows = [...document.querySelectorAll('.client_arrow')];
-        arrows.map(arrow => arrow.removeEventListener('click', this.arrowHandler));
-
-        let items = [...document.querySelectorAll('.ClientList')];
-        items.forEach((item) => {
-            item.classList.add('hidden_alt');
-        })
-
-        setTimeout(() => {
-            this.setState({position: !this.state.position, items: clientHandler(!this.state.position)});
-        }, 500);
-    }
-    
-    componentDidUpdate() {
-        let items=[...document.querySelectorAll('.ClientList')];
-        let arrows = [...document.querySelectorAll('.client_arrow')];
-        let showInterval = 250;
-
-        setTimeout(() => {            
-            items.forEach((item) => {
-                setTimeout(() => {item.classList.remove('hidden_alt')}, showInterval);
-                showInterval += 50;
-            })
-        }, 250);
-
-        setTimeout(() => {            
-            arrows.map(arrow => arrow.addEventListener('click', this.arrowHandler));
-        }, 1500);
+    const previous = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+        setActiveIndex(nextIndex);
     }
 
+    const slides = items.map((list, index) => {
 
-    render() {
-        return (
-            <div className='client_panel hidden_elems hidden_alt slide'>
-                <div className="client_arrow slide"><img src={arrow} alt='arrow' className='home_arrow'></img></div>
-                <div className="ClientsPanel">
-                    <ClientList items={this.state.items}/>
-                </div>
-                <div className="client_arrow slide"><img src={arrow} alt='arrow' className='home_arrow'></img></div>
+    return (
+        <CarouselItem
+            className='client_panel'
+            onExiting={() => setAnimating(true)}
+            onExited={() => setAnimating(false)}
+            key={index + 1}>
+
+            <div
+                style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    width: '75%',
+                    margin: '8vw auto',
+                    justifyContent: 'center'
+                }}>
+            {
+                list.map(item => <img src={item.image} key={item.name}></img>)
+            }
             </div>
-        )
-    }
+
+        </CarouselItem>
+        );
+    });
+
+    return (
+    <Carousel
+        style={{overflow: 'hidden'}}
+        activeIndex={activeIndex}
+        next={next}
+        previous={previous}>
+
+        {slides}
+
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+    </Carousel>
+    )
 }
+
+export default ClientsPanel

@@ -15,7 +15,7 @@ export default class RequestDemo extends Component {
     render() {
         return (
             <div className={"hidden_alt slide RequestDemo rqd" + this.props.id}>
-                <Link to='/request'>
+                <Link to='/contact'>
                     <button className="button_get_started"><span>{this.props.button}</span></button>
                 </Link>
             </div>

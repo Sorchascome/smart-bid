@@ -63,41 +63,28 @@
       }
 }
 
-.ClientsPanel {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    // margin: 5vw 0;
-    width: 75%;
-    margin: 0 auto;
-    height: 14vw;
+.client_panel {
+    width: 100%;
+    overflow: hidden;
 
-    @include breakpoint(1366px) {
-        width: 85%;
-    }
-}
+    img {
+        overflow: hidden;
+        object-fit: contain !important;
+        display: inline-flex !important;
+        // width: 2vw !important;
+        max-height: 3vw;
+        max-width: 8vw !important;
+        filter: grayscale(100%);
+        margin: 1vw 2vw;
+        cursor: pointer !important;
+        pointer-events: all !important;
+        transition: all 0.5s ease-in-out;
 
-.ClientList {
-    display: flex;
-    max-width: 6vw;
-    max-height: 3vw;
-    margin: 1.2vw 2.3vw;
-    filter: grayscale(100%);
-    cursor: pointer;
-    overflow: visible !important;
-
-    & img {
-        object-position: center center;
-        object-fit: contain;
-        display: flex;
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
+        &:hover {
+            filter: none; 
+        }
     }
 
-    &:hover {
-        filter: none; 
-    }
 
     @include breakpoint(1366px) {
         filter: none;
@@ -106,64 +93,15 @@
     }
 }
 
-.client_panel {
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    margin: 5% auto;
-    margin-bottom: 8vw;
-    z-index: 10;
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 3vw;
+    width: 3vw;
+    background-image: url('../uploads/cl_arrow.png');
 }
 
-.client_arrow {
-    cursor: pointer;
-    position: relative;
-    width: 3.3vw;
-    height: 3.3vw;
-    background: #FFFFFF;
-    border: 0.2vw solid #F88634;
-    box-sizing: border-box;
-    border-radius: 210px;
-    opacity: 0.2;
-    z-index: 10;
-    margin: auto 0;
-    display: flex;
-
-    @include breakpoint(1366px) {
-        width: 3.95vw;
-        height: 3.95vw;
-    }
-
-    &:hover, :active {
-        opacity: 0.75;
-    }
-
-    &:first-child {
-        float: right;
-
-        .home_arrow {
-            transform: rotate(-90deg);
-        }
-    }
-
-    &:last-child {
-        float: left;
-
-        .home_arrow {
-            transform: rotate(90deg);
-        }
-    }
-    
-    .home_arrow {
-        display: block;
-        object-fit: contain;
-        width: 1vw;
-        height: auto;
-        margin: auto;
-
-        @include breakpoint(1366px) {
-            width: 1.2vw;
-        }
-    }
+.carousel-control-prev-icon {
+    transform: rotate(180deg);
 }
+
+
 

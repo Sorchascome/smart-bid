@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
+import withElementsAppear from './withElementsAppear'
 
 export default class SBlogo extends Component {
     componentDidUpdate() {
         if (this.props.show === true) {
-            let Component = document.querySelector('.SBlogo');
-            setTimeout(() => {Component.classList.remove('hidden')}, 300);}
+            setTimeout(() => {this.Section.classList.remove('hidden')}, 300);}
     }
 
     render() {
         return (
-            <div className='SBlogo slide hidden'>
-            </div>
+            <div ref = {ref => this.Section = ref} className='SBlogo slide hidden' />
         )
     }
 }

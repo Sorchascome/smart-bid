@@ -2,38 +2,18 @@ import React, { Component } from 'react'
 
 import FewWords from './FewWords'
 
-// Helpers
-import { componentAppears } from '../helpers/componentAppears'
-import { elementHandler } from '../helpers/elementHandler'
+import withElementsAppear from './withElementsAppear'
 
-export default class AboutUs extends Component {
-    constructor(props) {
-        super(props);
+class AboutUs extends Component {
 
-        this.state = {
-            show: false,
-            class: '.AboutUs'
-        }
-
-        this.elementsAppear = this.elementsAppear.bind(this);
-    }
-    
-    elementsAppear() {
-        elementHandler(this, this.elementsAppear);
-    }
-
-    componentDidMount() {
-        componentAppears(this, this.elementsAppear);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.elementsAppear);
+    componentDidUpdate() {
+        if (this.props.isVisible) this.props.elementsAppear(this.Section)
     }
 
     render() {
         return (
-            <div className='AboutUs desk'>
-                <FewWords show={this.state.show} />
+            <div className='AboutUs desk' ref = {ref => this.Section = ref}>
+                <FewWords show={this.props.isVisible} />
                 <span className="hexgroup_white hidden_elems hidden_alt slide"></span>
                 <span className="hex_white hidden_elems hidden slide"></span>
                 <span className="polysmall_nosh hidden_elems hidden slide"></span>
@@ -41,3 +21,5 @@ export default class AboutUs extends Component {
         )
     }
 }
+
+export default withElementsAppear(AboutUs)

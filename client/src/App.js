@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './style/main.scss'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, IndexRoute } from 'react-router-dom'
 
 // Routes
 import Main from './routes/Main'
@@ -13,7 +13,7 @@ export default class App extends Component {
             <Router>
                 <Route exact path='/' component={Main} />
                 <Route exact path='/privacy' component={Privacy} />
-                <Route exact path='/request' component={Regpage} />
+                <Route exact path='/contact' component={Regpage} />
             </Router>
         )
     }
